@@ -12,10 +12,20 @@
         include_once("assets/php/header.php");
         ?>
     <!-- contenu body -->
+     <!-- debut contenu trouver sur BeCode -->
+    <!-- <main>
+    <h1>
+       < ?php echo $_GET['name']; ?>
+    </h1>
+    <a href="/">Homepage</a>
+</main> -->
+<!-- fin contenu trouver sur BeCode -->
+
+
     <img class="image" src="assets/pokemon/abra" alt="">
     <main> 
-        <section>
-            <div class="image">
+        <section class="col">
+            <div class="pokemon">
             <img  src="assets/pokemon/abra.png" alt="">
             </div>
             <div>
