@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Pokédex</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> -->
+<body>
 <?php
 include 'assets/php/header.php';
 ?> 
