@@ -30,6 +30,9 @@ nav a:hover {
   width: 50%;
 }
 
+footer div svg {
+  height: 30px;
+}
 @media (min-width: 700px) {
   /* Styles pour les gsm */
 }/*# sourceMappingURL=style.css.map */
