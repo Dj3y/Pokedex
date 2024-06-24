@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<?php include_once("assets/php/header.php"); ?>
     <!-- Ajout du fichier header -->
     <main>
         <form action="assets/php/search.php" method="post">
