@@ -8,7 +8,26 @@
 </head>
 <body>
     <!-- Ajout du fichier header -->
-    <main></main>
+    <?php 
+        include_once("assets/php/header.php");
+        ?>
+    <!-- contenu body -->
+    <img class="image" src="assets/pokemon/abra" alt="">
+    <main> 
+        <section>
+            <div class="image">
+            <img  src="assets/pokemon/abra.png" alt="">
+            </div>
+            <div>
+            <p class="stats-info">,,;,;</p>
+            </div>
+        </section>
+        <section>
+            <div>
+           <img class="evolution" src="" alt=""> 
+           </div>
+       </section>
+    </main>
     <!-- Ajout du fichier footer -->
     <?php include_once("assets/php/footer.php"); ?>
 </body>

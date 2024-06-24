@@ -29,6 +29,19 @@ nav a:hover {
   height: 50%;
   width: 50%;
 }
+.image
+{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.evolution{
+
+}
+.stats-info{
+
+}
 
 footer div svg {
   height: 30px;
