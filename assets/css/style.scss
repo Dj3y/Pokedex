@@ -1,0 +1,36 @@
+body {
+    font-size: 16px;
+    background-color: aqua;
+}
+
+
+    nav {
+        display: flex;
+        justify-content: center; /* Centrer horizontalement */
+        align-items: center;     /* Centrer verticalement */
+        background-color: white;
+        padding: 1em;
+    }
+    
+    nav a {
+        color: black;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    nav a:hover {
+        background-color: #555;
+    }
+
+    .logo{
+        display: flex;
+        
+
+    }
+    
+
+@media (min-width: 769px)  {
+    /* Styles pour les ordinateurs de bureau */
+   }
+   
