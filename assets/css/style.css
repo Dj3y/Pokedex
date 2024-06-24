@@ -29,19 +29,37 @@ nav a:hover {
   height: 50%;
   width: 50%;
 }
-.image
-{
+
+.col {
+  display: flex;
+  flex-direction: column;
+
+  
+  .image {
     display: flex;
     justify-content: flex-end;
+  }
 
+ 
+  .col.stats-info {
+    display: flex;
+  
+  justify-content: flex-start;
 }
+  }
+
+ 
+
+.text-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
 
 .evolution{
 
 }
-.stats-info{
 
-}
 
 footer div svg {
   height: 30px;
