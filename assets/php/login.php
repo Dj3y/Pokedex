@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pokedex</title>
-    <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -26,14 +26,15 @@
 
         echo "<main class='formCase'>";
     ?>
-
+    <section class="form-login">
+        <h1>My account</h1>
         <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
             <label>Username: </label><input type="text" name="username" class="inputfield"><br>
             <label>Password: </label><input type="password" name="password" class="inputfield"><br>
             <input type="submit" value="login" class="button"><br>
             <p><a href="./register.php">inscription</a></p>
         </form>
-
+    </section>
     <?php
 
         echo "</main>";
