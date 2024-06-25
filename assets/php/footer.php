@@ -27,7 +27,7 @@
             </svg>
         </a>
         </div> 
-    <div>
+    <div class="github-perso">
         <p>&#169;
              <a href="https://github.com/Dj3y" target="_blank">Dj3y</a> / <a href="https://github.com/NathAmd" target="_blank">Nath</a> / <a href="https://github.com/zaraana" target="_blank">Zahra</a> / <a href="https://github.com/Druart-Stacy" target="_blank">Stacy</a>
         </p>

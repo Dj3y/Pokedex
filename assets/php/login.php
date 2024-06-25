@@ -26,13 +26,15 @@
 
         echo "<main class='formCase'>";
     ?>
-
+    <section class="form-login">
+        <h1>My Account</h1>
         <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
             <label>Username: </label><input type="text" name="username" class="inputfield"><br>
             <label>Password: </label><input type="password" name="password" class="inputfield"><br>
             <input type="submit" value="login" class="button"><br>
             <p><a href="./register.php">inscription</a></p>
         </form>
+    </section>
 
     <?php
 

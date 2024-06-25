@@ -1,6 +1,6 @@
 body {
     font-size: 16px;
-    background-color: aqua;
+    background-color: #F3F4F6;
 }
 
 
@@ -20,15 +20,16 @@ body {
     }
     
     nav a:hover {
-        background-color: #555;
+        background-color: #F3F4F6;
     }
 
     .logo{
-        display: flex;
+        display: block;
+        margin: 0 auto;
+        width: 25%;
     }
     
 
 @media (min-width: 769px)  {
     /* Styles pour les ordinateurs de bureau */
    }
-   
