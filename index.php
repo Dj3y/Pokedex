@@ -17,7 +17,10 @@
         </form>
         <div class="pokemon-card-container">
             <?php
-            include("assets/php/engine.php");
+            // connexion DB pour docker
+            // include("assets/php/engine.php");
+            // connexion DB pour XAMPP - MAMP - LAMP
+            include("assets/php/dbconnect.php");
             include("assets/php/pokemon.php");
             include("assets/php/search.php");
             ?>

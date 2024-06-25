@@ -1,5 +1,8 @@
 <?php 
-include("./engine.php");
+    // connexion DB pour docker
+    // include("assets/php/engine.php");
+    // connexion DB pour XAMPP - MAMP - LAMP
+    include("assets/php/dbconnect.php");
 try {
     $sql = "SELECT * FROM pokemon";
 
