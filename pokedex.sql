@@ -501,7 +501,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (457, 'Luminéon', '{ \"type\":[\"Water\"]}', '{\"HP\":69,\"Attack\":69,\"Defense\":76,\"Sp. Attack\":69,\"Sp. Defense\":86,\"Speed\":91}', '{}', 'Lumineon.png'),
 (458, 'Babimanta', '{ \"type\":[\"Water\",\"Flying\"]}', '{\"HP\":45,\"Attack\":20,\"Defense\":50,\"Sp. Attack\":60,\"Sp. Defense\":120,\"Speed\":50}', '{}', 'Mantyke.png'),
 (459, 'Blizzi', '{ \"type\":[\"Grass\",\"Ice\"]}', '{\"HP\":60,\"Attack\":62,\"Defense\":50,\"Sp. Attack\":62,\"Sp. Defense\":60,\"Speed\":40}', '{}', 'Snover.png'),
-(460, 'Blizzaroi', '{ \"type\":[\"Grass\",\"Ice\"]}', '{\"HP\":90,\"Attack\":92,\"Defense\":75,\"Sp. Attack\":92,\"Sp. Defense\":85,\"Speed\":60}', '{}', 'Abomasnow.png'),
+(460, 'Blizzaroi', '{ \"type\":[\"Grass\",\"Ice\"]}', '{\"HP\":90,\"Attack\":92,\"Defense\":75,\"Sp. Attack\":92,\"Sp. Defense\":85,\"Speed\":60}', { \"imgage\":'Abomasnow.png'}'),
 (461, 'Dimoret', '{ \"type\":[\"Dark\",\"Ice\"]}', '{\"HP\":70,\"Attack\":120,\"Defense\":65,\"Sp. Attack\":45,\"Sp. Defense\":85,\"Speed\":125}', '{}', 'Weavile.png'),
 (462, 'Magnézone', '{ \"type\":[\"Electric\",\"Steel\"]}', '{\"HP\":70,\"Attack\":70,\"Defense\":115,\"Sp. Attack\":130,\"Sp. Defense\":90,\"Speed\":60}', '{}', 'Magnezone.png'),
 (463, 'Coudlangue', '{ \"type\":[\"Normal\"]}', '{\"HP\":110,\"Attack\":85,\"Defense\":95,\"Sp. Attack\":80,\"Sp. Defense\":95,\"Speed\":50}', '{}', 'Lickilicky.png'),
