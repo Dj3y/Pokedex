@@ -22,20 +22,17 @@
 <!-- fin contenu trouver sur BeCode -->
 
 
-    <img class="image" src="assets/pokemon/abra" alt="">
-    <main> 
-        <section class="col">
+<section id="pokedex" class="col">
+            <h2>Pokedex</h2>
             <div class="pokemon">
-            <img  src="assets/pokemon/abra.png" alt="">
-            </div>
-            <div>
-            <p class="stats-info">,,;,;</p>
+                <img src="assets/pokemon/abra.png" alt="Abra">
+                <p class="stats-info">Some stats information here</p>
             </div>
         </section>
-        <section>
-            <div>
-           <img class="evolution" src="" alt=""> 
-           </div>
+        <section class="evolution-container">
+            <img class="evolution" src="assets/pokemon/kadabra.png" alt="Evolution 1">
+            <img class="evolution" src="assets/pokemon/evolution2.png" alt="Evolution 2">
+
        </section>
     </main>
     <!-- Ajout du fichier footer -->
