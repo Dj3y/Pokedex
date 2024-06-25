@@ -6,5 +6,6 @@
         <a href="#pokedex">Pokedex</a>
         <a href="assets/php/login.php">My account</a>
         <a href="assets/php/register.php">Register</a>
+        <i id="theme-toggle" class="fas fa-moon theme-toggle"></i>
     </nav>
 </header>

@@ -11,6 +11,7 @@
     <?php 
         include_once("assets/php/header.php");
         ?>
+        
     <!-- contenu body -->
      <!-- debut contenu trouver sur BeCode -->
     <!-- <main>
@@ -22,7 +23,7 @@
 <!-- fin contenu trouver sur BeCode -->
 
      <!-- debut de partie a modifier pour que sa allait avec la base de donnée -->
-<section id="pokedex" class="col">
+<!-- <section id="pokedex" class="col">
             <h2>Pokedex</h2>
             <div class="pokemon">
                 <img src="assets/pokemon/abra.png" alt="Abra">
@@ -33,10 +34,13 @@
             <img class="evolution" src="assets/pokemon/kadabra.png" alt="Evolution 1">
             <img class="evolution" src="assets/pokemon/evolution2.png" alt="Evolution 2">
 
-       </section>
+       </section> -->
        <!-- fin de partie a modifier pour que sa allait avec la base de donnée -->
     </main>
+    
+
     <!-- Ajout du fichier footer -->
+
     <?php include_once("assets/php/footer.php"); ?>
 </body>
 </html>
