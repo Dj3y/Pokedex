@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search'])) {
                 $base = json_decode($value["base"], true);
                 $evolution = json_decode($value["evolution"], true);
                 
+                echo '<p>Pokemon infos:</p>';
                 // Display types
                 if (isset($types['type'])) {
                     echo '<p>Type: ' . implode(", ", $types['type']) . '</p>';
@@ -31,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search'])) {
                 }
                 
                 // Display infos
-                echo '<p>Pokemon infos:</p>';
                 foreach ($base as $stat => $statValue) {
                     echo '<p>' . $stat . ': ' . $statValue . '</p>';
                 }
