@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <!-- Ajout du fichier header -->
@@ -13,6 +15,8 @@
         ?>
         
     <!-- contenu body -->
+    <i id="theme-toggle" class="fas fa-moon theme-toggle"></i>
+    <script src="/tools/theme-toggle.js"></script>
      <!-- debut contenu trouver sur BeCode -->
     <!-- <main>
     <h1>
@@ -38,9 +42,10 @@
        <!-- fin de partie a modifier pour que sa allait avec la base de donnée -->
     </main>
     
-
     <!-- Ajout du fichier footer -->
 
     <?php include_once("assets/php/footer.php"); ?>
+    
+
 </body>
 </html>
