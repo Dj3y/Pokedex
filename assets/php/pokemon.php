@@ -14,10 +14,10 @@
                 $results = $select->fetchAll(PDO::FETCH_ASSOC);
                 
                 foreach ($results as $value) {
-                    echo '<div class="pokemon-card">';
+                    echo '<div class="pokemon-card"><a href="pokemonDetails.php?idP='. $value["id"] .'"';
                     echo '<h2>' . $value["name"] . '</h2>';
                     echo '<img src="assets/pokemon/' . $value["image"] . '" alt="' . $value["name"] . '">';
-                    echo '</div>';
+                    echo '</a></div>';
                 }
             } catch (PDOException $e) {
                 echo "Error: " . $e->getMessage();

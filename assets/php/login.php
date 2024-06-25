@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php include_once("./header.php"); ?>
+    <?php include_once("assets/php/header.php"); ?>
 
     <?php
     session_start();
