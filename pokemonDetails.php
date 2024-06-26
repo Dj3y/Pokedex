@@ -35,13 +35,13 @@
             // echo '<pre>';
             // print_r($types["type"][0]);
             // echo '</pre>';
+            // echo count($types);
             $bases = json_decode($pokemon["base"], true);
             $evolutions = json_decode($pokemon["evolution"], true);
             echo '<div><section><h1>' . $pokemon["name"] . '</h1></section>';
             echo '<div>';
-            echo count($types);
 
-            // for pour afficher les types du pokemon
+            // for pour afficher les types du pokemon ajout de type => le tableau 
             for($i = 0; $i < count($types["type"]); $i++){
                 echo'<div><p>'. $types["type"][$i] . '</p></div>'; 
             }
