@@ -15,16 +15,7 @@
     <?php
     session_start();
 
-    $servername = "127.0.0.1";
-    $username = "root";
-    $dbname = "pokedex";
-
-
-
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // exception error
-
+    include("engine.php");
 
         echo "<main class='formCase'>";
     ?>
@@ -60,10 +51,7 @@
         </script>
 
     <?php
-        echo "</main>";
-    } catch (PDOException $e) {
-        echo "Connection failed";
-    }
+    echo "</main>";
     ?>
 
 
