@@ -1,0 +1,88 @@
+.Bug{
+    background-color: #729F3F;
+}
+
+// Définition des couleurs de début et de fin du dégradé
+$couleur-debut: rgba(83, 164, 207, 1);
+$couleur-fin: rgba(241, 110, 87, 1);
+
+// Classe pour appliquer le dégradé de fond
+.Dragon{
+    background: rgba(83, 164, 207, 1);
+    background: -moz-linear-gradient(360deg, rgba(83, 164, 207, 1) 0%, rgba(241, 110, 87, 1) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(83, 164, 207, 1) 0%, rgba(241, 110, 87, 1) 100%);
+    background: linear-gradient(360deg, rgba(83, 164, 207, 1) 0%, rgba(241, 110, 87, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#53a4cf", endColorstr="#f16e57", GradientType=1);
+}
+
+.Fairy{
+    background-color: #FDB9E9;
+}
+
+.Fire{
+    background-color: #FD7D24;
+}
+
+.Ghost{
+    background-color: #7B62A3;
+}
+
+.Ground{
+    background: rgb(171,152,66);
+    background: -moz-linear-gradient(360deg, rgba(171,152,66,1) 25%, rgba(247,222,63,1) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(171,152,66,1) 25%, rgba(247,222,63,1) 100%);
+    background: linear-gradient(360deg, rgba(171,152,66,1) 25%, rgba(247,222,63,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ab9842",endColorstr="#f7de3f",GradientType=1);
+}
+
+.Normal{
+    background-color: #A4ACAF;
+}
+
+.Psychic{
+    background-color: #F366B9;
+}
+
+.Steel{
+    background-color: #9EB7B8;
+}
+
+.Dark{
+    background-color: #707070;
+}
+
+.Electric{
+    background-color: #EED535;
+}
+
+.Fighting{
+    background-color: #D56723;
+}
+
+.Flying{
+    background: rgb(189,185,184);
+    background: -moz-linear-gradient(360deg, rgba(189,185,184,1) 0%, rgba(61,199,239,1) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(189,185,184,1) 0%, rgba(61,199,239,1) 100%);
+    background: linear-gradient(360deg, rgba(189,185,184,1) 0%, rgba(61,199,239,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bdb9b8",endColorstr="#3dc7ef",GradientType=1);
+}
+
+.Grass{
+    background-color: #9BCC50;
+}
+
+.Ice{
+    background-color: #51C4E7;
+}
+
+.Poison{
+    background-color: #B97FC9;
+}
+
+.Rock{
+    background-color: #A38C21;
+}
+
+.Water{
+    background-color: #4592C4;
+}

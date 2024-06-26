@@ -83,4 +83,29 @@ main{
             }
         }
     }
+    .div-detail{
+        display: flex;
+        justify-content: space-around;
+        .info-pokemon{
+            background-color: white;
+            width: 40%;
+            margin: 5%;
+            padding: 1%;
+            border-radius: 10px;
+            .div-type{
+                display: flex;
+                p{
+                    padding-right: 2%;
+                }
+            }
+            .progress-bar{
+                display: flex;
+                flex-direction: column;
+                progress{
+                    color: #4B5563;
+                    border-radius: 10px;    
+                }
+            }
+        }
+    }
 }

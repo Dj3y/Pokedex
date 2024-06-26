@@ -20,6 +20,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Details</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/type.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -29,33 +31,38 @@
         foreach($array as $pokemon){
             // Decode JSON fields
             $types = json_decode($pokemon["type"], true);
-            echo '<pre>';
-            print_r($types);
-            echo '</pre>';
+            // echo '<pre>';
+            // print_r($types);
+            // echo '</pre>';
             // echo '<pre>';
             // print_r($types["type"][0]);
             // echo '</pre>';
             // echo count($types);
             $bases = json_decode($pokemon["base"], true);
             $evolutions = json_decode($pokemon["evolution"], true);
-            echo '<div><section><h1>' . $pokemon["name"] . '</h1></section>';
-            echo '<div>';
-
+            echo '<div class = "div-detail"><section class = "info-pokemon"><h1>' . $pokemon["name"] . '</h1>';
+            
+            echo'<div class ="div-type">';
             // for pour afficher les types du pokemon ajout de type => le tableau 
             for($i = 0; $i < count($types["type"]); $i++){
-                echo'<div><p>'. $types["type"][$i] . '</p></div>'; 
+                echo'<p class ="'. $types["type"][$i] . '">'. $types["type"][$i] . '</p>'; 
             }
-            
+            echo'</div>';
+
+            echo'<div class = "progress-bar">';
             // foreach pour afficher les bases
             foreach($bases as $base => $key){
-                echo'<div><p>' . $base . ' '. $key . '</p></div>';
-            }
-
-            // foreach pour afficher les evolutions
-            foreach($evolutions as $evolution => $key){
-                echo'<div><p>' . $evolution . ' '. $key . '</p></div>';
+                echo'<label for="file">' . $base . '</label><progress class="progress" id="file" max="100" value="' .$key . '">' .$key . '</progress>';
             }
             echo '</div>';
+
+            echo'<div>';
+            // foreach pour afficher les evolutions
+            foreach($evolutions as $evolution => $key){
+                echo'<p>' . $evolution . ' '. $key . '</p>';
+            }
+            echo'</div>';
+            echo '</section>';
             echo '<div><img src="assets/pokemon/' .$pokemon["image"] . '" alt="image of ' .$pokemon["name"] . '"><div>';
         }
         include("assets/php/button.php");

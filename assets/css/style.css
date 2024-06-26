@@ -115,6 +115,31 @@ main .form-register form a {
 main .form-register form a:hover {
   color: black;
 }
+main .div-detail {
+  display: flex;
+  justify-content: space-around;
+}
+main .div-detail .info-pokemon {
+  background-color: white;
+  width: 40%;
+  margin: 5%;
+  padding: 1%;
+  border-radius: 10px;
+}
+main .div-detail .info-pokemon .div-type {
+  display: flex;
+}
+main .div-detail .info-pokemon .div-type p {
+  padding-right: 2%;
+}
+main .div-detail .info-pokemon .progress-bar {
+  display: flex;
+  flex-direction: column;
+}
+main .div-detail .info-pokemon .progress-bar progress {
+  color: #4B5563;
+  border-radius: 10px;
+}
 
 footer {
   background-color: white;
