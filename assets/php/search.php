@@ -1,8 +1,5 @@
 <?php 
-    // connexion DB pour docker
-    // include("assets/php/engine.php");
-    // connexion DB pour XAMPP - MAMP - LAMP
-    include("assets/php/dbconnect.php");
+    include("assets/php/engine.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search'])) {
     $name = $_POST['name'];
