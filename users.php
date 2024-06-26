@@ -63,12 +63,27 @@
                        <hr>
                        <div class="page-fav-card">
                            <?php
-                            $array = json_decode($user['favoris'])->fav;
+                            $favoris = json_decode($user['favoris']);
+                            $array = &$favoris->fav;
                             if (count($array) < 1) {
                                 echo "You dont have favoris";
                             } else {
+                                $stmt = $conn->prepare("SELECT * FROM pokemon WHERE id = :id");
+                                $stmt->bindParam(':id', $poke);
+
+
                                 foreach ($array as $poke) {
-                                    echo $poke;
+                                    $stmt->execute();
+                                    $pokemon = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                                    if ($pokemon !== false) {
+                                        echo '<div class="pokemon-card"><a href="pokemonDetails.php?idP=' . $pokemon["id"] . '"';
+                                        echo '<h2>' . $pokemon["name"] . '</h2>';
+                                        echo '<img src="assets/pokemon/' . $pokemon["image"] . '" alt="' . $pokemon["name"] . '">';
+                                        echo '</a></div>';
+                                    } else {
+                                        echo "Aucun Pokémon trouvé avec l'ID " . $poke;
+                                    }
                                 }
                             }
                             ?>
@@ -150,6 +165,30 @@
            margin: 1em;
            text-align: justify;
        }
+
+       .page-fav-card {
+           display: flex;
+           justify-content: space-around;
+
+       }
+
+       .pokemon-card {
+           border: solid 1px black;
+           border-radius: 1em;
+           margin: 1em;
+           width: 15%;
+
+           text-align: center;
+       }
+
+       .pokemon-card img {
+           width: 100%;
+       }
+
+       .pokemon-card h2 {
+           color: black;
+           font-size: 1.2em;
+       }
    </style>
 
    <?php
@@ -159,11 +198,11 @@
 
         $mybio = htmlspecialchars(trim(filter_input(INPUT_POST, "mytextarea", FILTER_SANITIZE_FULL_SPECIAL_CHARS)));
 
-        // Liez les paramètres à la requête
+
         $stmt->bindParam(':bio', $mybio);
         $stmt->bindParam(':username', $_SESSION['username']);
 
-        // Exécutez la requête
+
         $stmt->execute();
     }
     ?>
