@@ -1,1 +1,44 @@
-  
+main{
+    .form-login{
+        background-color: white;
+        width: 50%;
+        margin: 5% auto;
+        padding: 1%;
+        border-radius: 10px;
+        h1{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .inputfield{
+                background-color: #E5E7EB;
+                border: none;
+                margin-bottom: 2%;
+                padding: 1%;
+            }
+            label,input{
+                margin-left: 3%;
+                margin-right: 3%; 
+            }
+            .button{
+                width: 16%;
+                text-transform: capitalize;
+                border: none;
+                padding: 1%;
+                &:hover{
+                    color: white;
+                    background-color:#7e7e7f;
+                }
+            }
+            a{
+                color:#326CB3;
+                text-transform: uppercase;
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+}

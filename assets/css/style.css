@@ -1,12 +1,12 @@
 body {
   font-size: 16px;
-  background-color: rgba(219, 217, 217, 0.913);
+  background-color: #F3F4F6;
 }
 
 nav {
   display: flex;
-  justify-content: center;
-  align-items: center; 
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
   background-color: white;
   padding: 1em;
 }
@@ -19,20 +19,74 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #555;
+  background-color: #F3F4F6;
 }
 
 .logo {
-  
   display: block;
   margin: 0 auto;
-  height: 50%;
-  width: 50%;
+  width: 25%;
 }
 
+@media (min-width: 769px) {
+  /* Styles pour les ordinateurs de bureau */
+}
+main .form-login {
+  background-color: white;
+  width: 50%;
+  margin: 5% auto;
+  padding: 1%;
+  border-radius: 10px;
+}
+main .form-login h1 {
+  text-align: center;
+}
+main .form-login form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .form-login form .inputfield {
+  background-color: #E5E7EB;
+  border: none;
+  margin-bottom: 2%;
+  padding: 1%;
+}
+main .form-login form label, main .form-login form input {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+main .form-login form .button {
+  width: 16%;
+  text-transform: capitalize;
+  border: none;
+  padding: 1%;
+}
+main .form-login form .button:hover {
+  color: white;
+  background-color: #7e7e7f;
+}
+main .form-login form a {
+  color: #326CB3;
+  text-transform: uppercase;
+}
+main .form-login form a:hover {
+  color: black;
+}
+
+footer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1%;
+}
 footer div svg {
   height: 30px;
 }
-@media (min-width: 700px) {
-  /* Styles pour les gsm */
-}/*# sourceMappingURL=style.css.map */
+footer .github-perso a {
+  color: #326CB3;
+}
+footer .github-perso a:hover {
+  color: black;
+}
