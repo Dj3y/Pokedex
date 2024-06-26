@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pokedex</title>
-    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -18,17 +18,18 @@
 
     echo "<main class='formCase'>";
     ?>
-
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-        <label>Username: </label><input type="text" name="username" class="inputfield"><br>
-        <label>Password: </label><input type="password" name="password" class="inputfield" id="password"><br>
-        <label>Repeat: </label><input type="password" name="repassword" class="inputfield" id="repassword"><br>
-        <label id="error-repassword"></label><br>
-        <label>Email: </label><input type="text" name="email" class="inputfield"><br>
-        <input type="submit" value="inscription" class="button"><br>
-        <p><a href="./login.php">login</a></p>
-    </form>
-
+    <section class="form-register">
+        <h1>Register</h1>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+            <label>Username: </label><input type="text" name="username" class="inputfield"><br>
+            <label>Password: </label><input type="password" name="password" class="inputfield" id="password"><br>
+            <label>Repeat: </label><input type="password" name="repassword" class="inputfield" id="repassword"><br>
+            <label id="error-repassword"></label><br>
+            <label>Email: </label><input type="text" name="email" class="inputfield"><br>
+            <input type="submit" value="inscription" class="button"><br>
+            <p><a href="./login.php">login</a></p>
+        </form>
+    </section>
     <script>
         $("#repassword").on('input', function(e) {
             console.log($("#repassword").val())
