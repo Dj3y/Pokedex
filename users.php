@@ -1,3 +1,9 @@
+   <?php
+    include("./assets/php/engine.php");
+    ?>
+
+
+
    <!DOCTYPE html>
    <html lang="en">
 
@@ -14,7 +20,6 @@
        <?php include_once("./assets/php/header.php"); ?>
 
        <?php
-        include("./assets/php/engine.php");
 
         if (!empty($_SESSION['username'])) {
             //($_SESSION['admin'] == 1 ? "Admin" : "Users");
@@ -36,17 +41,19 @@
                            <h2>
                                <?php echo $user['username'] ?>
                            </h2>
-                           <p>
-                               <?php echo $user['bio'] ?>
+                           <div>
+                               <p class="bio">
+                                   <?php echo $user['bio'] ?>
+                               </p>
                                <br>
-                               <button onclick="document.querySelector('dialog').showModal()">Edite bio</button>
+                               <button class="button" onclick="document.querySelector('dialog').showModal()">Edite bio</button>
                                <dialog>
                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-                                       <label>Your bio:</label><br><input type="text" name="bio" class="inputfield" value="<?php echo $user['bio'] ?>"><br>
-                                       <input type="submit" value="Save and close" class="button"><br>
+                                       <label>Your bio:</label><br><textarea name="mytextarea"><?php echo $user['bio'] ?></textarea><br>
+                                       <input class="button" type="submit" value="Save and close" class="button"><br>
                                    </form>
                                </dialog>
-                           </p>
+                           </div>
                        </div>
                    </div>
                    <div>
@@ -55,14 +62,22 @@
                        </h2>
                        <hr>
                        <div class="page-fav-card">
-                           <!-- Favoris is here -->
+                           <?php
+                            $array = json_decode($user['favoris'])->fav;
+                            if (count($array) < 1) {
+                                echo "You dont have favoris";
+                            } else {
+                                foreach ($array as $poke) {
+                                    echo $poke;
+                                }
+                            }
+                            ?>
                        </div>
                    </div>
                </div>
 
        <?php
             }
-
             include_once("./assets/php/footer.php");
         } else {
             echo "not connected";
@@ -104,4 +119,51 @@
            border: solid 2px black;
            border-radius: 1em;
        }
+
+       .button {
+           width: fit-content;
+           text-transform: capitalize;
+           border: none;
+
+           font-size: 1em;
+           padding: 0.5em;
+           margin: 0.5em;
+       }
+
+       .button:hover {
+           color: white;
+           background-color: #7e7e7f;
+       }
+
+       dialog {
+           width: 50%;
+           height: max-content;
+       }
+
+       textarea {
+           width: 100%;
+           height: 15em;
+           resize: none
+       }
+
+       .bio {
+           margin: 1em;
+           text-align: justify;
+       }
    </style>
+
+   <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        $stmt = $conn->prepare("UPDATE users SET bio = :bio WHERE username = :username");
+
+        $mybio = htmlspecialchars(trim(filter_input(INPUT_POST, "mytextarea", FILTER_SANITIZE_FULL_SPECIAL_CHARS)));
+
+        // Liez les paramètres à la requête
+        $stmt->bindParam(':bio', $mybio);
+        $stmt->bindParam(':username', $_SESSION['username']);
+
+        // Exécutez la requête
+        $stmt->execute();
+    }
+    ?>
