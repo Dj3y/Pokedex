@@ -10,45 +10,44 @@
 </head>
 
 <body>
-    <?php include_once("./header.php"); ?>
+    <?php include_once("./assets/php/header.php"); ?>
 
     <?php
-    session_start();
 
-    include("engine.php");
+    include("./assets/php/engine.php");
 
-        echo "<main class='formCase'>";
+    echo "<main class='formCase'>";
     ?>
 
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-            <label>Username: </label><input type="text" name="username" class="inputfield"><br>
-            <label>Password: </label><input type="password" name="password" class="inputfield" id="password"><br>
-            <label>Repeat: </label><input type="password" name="repassword" class="inputfield" id="repassword"><br>
-            <label id="error-repassword"></label><br>
-            <label>Email: </label><input type="text" name="email" class="inputfield"><br>
-            <input type="submit" value="inscription" class="button"><br>
-            <p><a href="./login.php">login</a></p>
-        </form>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+        <label>Username: </label><input type="text" name="username" class="inputfield"><br>
+        <label>Password: </label><input type="password" name="password" class="inputfield" id="password"><br>
+        <label>Repeat: </label><input type="password" name="repassword" class="inputfield" id="repassword"><br>
+        <label id="error-repassword"></label><br>
+        <label>Email: </label><input type="text" name="email" class="inputfield"><br>
+        <input type="submit" value="inscription" class="button"><br>
+        <p><a href="./login.php">login</a></p>
+    </form>
 
-        <script>
-            $("#repassword").on('input', function(e) {
-                console.log($("#repassword").val())
-                if ($("#repassword").val() != $("#password").val()) {
-                    $("#error-repassword").text("password does not match")
-                } else {
-                    $("#error-repassword").text("")
-                }
-            })
+    <script>
+        $("#repassword").on('input', function(e) {
+            console.log($("#repassword").val())
+            if ($("#repassword").val() != $("#password").val()) {
+                $("#error-repassword").text("password does not match")
+            } else {
+                $("#error-repassword").text("")
+            }
+        })
 
-            $(".button").on('mouseenter touchstart', function(e) {
-                e.target.type = "button"
-                if ($("#password").val().length > 3 && $("input[name=username]").val().length > 3) {
-                    if ($("#repassword").val() == $("#password").val()) {
-                        e.target.type = "submit"
-                    }
+        $(".button").on('mouseenter touchstart', function(e) {
+            e.target.type = "button"
+            if ($("#password").val().length > 3 && $("input[name=username]").val().length > 3) {
+                if ($("#repassword").val() == $("#password").val()) {
+                    e.target.type = "submit"
                 }
-            })
-        </script>
+            }
+        })
+    </script>
 
     <?php
     echo "</main>";
@@ -90,7 +89,7 @@
 
             if (strlen($username) > 3 && strlen($password) > 3) {
                 $stmt->execute();
-                header('Location: login.php'); // Redirect to login.php
+                header('Location: ./login.php'); // Redirect to login.php
                 exit;
             } else {
                 echo "form not valid";
@@ -100,7 +99,7 @@
 
     ?>
 
-    <?php include_once("./footer.php"); ?>
+    <?php include_once("./assets/php/footer.php"); ?>
 </body>
 
 </html>

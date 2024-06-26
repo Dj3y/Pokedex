@@ -10,13 +10,12 @@
 </head>
 
 <body>
-    <?php include_once("assets/php/header.php"); ?>
+    <?php include_once("./assets/php/header.php"); ?>
 
     <?php
-    session_start();
-    include("engine.php");
+    include("./assets/php/engine.php");
 
-        echo "<main class='formCase'>";
+    echo "<main class='formCase'>";
     ?>
     <section class="form-login">
         <h1>My account</h1>
@@ -50,7 +49,7 @@
                 $_SESSION['username'] = $user['username']; // Store the username in session
                 $_SESSION['admin'] = $user['admin']; // Store the admin access in session
 
-                header('Location: ../../index.php'); // Redirect to index.php
+                header('Location: ./index.php'); // Redirect to index.php
                 exit;
             } else {
                 echo "password not valid";
@@ -62,7 +61,7 @@
 
     ?>
 
-    <?php include_once("./footer.php"); ?>
+    <?php include_once("./assets/php/footer.php"); ?>
 </body>
 
 </html>
