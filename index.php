@@ -10,8 +10,8 @@
 <body>
 <?php include_once("assets/php/header.php"); ?>
     <main>
-        <form action="index.php" method="post">
-            <label for="name">Pokémon Name:</label>
+        <form class="search" action="index.php" method="post">
+            <label for="name">𝒫𝑜𝓀é𝓂𝑜𝓃 𝒩𝒶𝓂𝑒:</label>
             <input type="text" name="name" id="name" required>
             <button type="submit" name="search">Search</button>
         </form>

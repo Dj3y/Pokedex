@@ -1,10 +1,10 @@
 <?php 
-    // connexion DB pour docker
-    // include("assets/php/engine.php");
-    // connexion DB pour XAMPP - MAMP - LAMP
-    include("assets/php/dbconnect.php");
+
+    include("assets/php/engine.php");
+
 try {
     $sql = "SELECT * FROM pokemon";
+
 
     $select = $connect->prepare($sql);
     //u not searching a precise thing, since * then no need ([])!
