@@ -73,6 +73,48 @@ main .form-login form a {
 main .form-login form a:hover {
   color: black;
 }
+main .form-register {
+  background-color: white;
+  width: 50%;
+  margin: 5% auto;
+  padding: 1%;
+  border-radius: 10px;
+}
+main .form-register h1 {
+  text-align: center;
+}
+main .form-register form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .form-register form .inputfield {
+  background-color: #E5E7EB;
+  border: none;
+  margin-bottom: 2%;
+  padding: 1%;
+}
+main .form-register form label, main .form-register form input {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+main .form-register form .button {
+  width: 20%;
+  text-transform: capitalize;
+  border: none;
+  padding: 1%;
+}
+main .form-register form .button:hover {
+  color: white;
+  background-color: #7e7e7f;
+}
+main .form-register form a {
+  color: #326CB3;
+  text-transform: uppercase;
+}
+main .form-register form a:hover {
+  color: black;
+}
 
 footer {
   background-color: white;
