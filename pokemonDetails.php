@@ -1,5 +1,5 @@
 <?php
-    require_once("assets/php/dbconnect.php");
+     include("assets/php/engine.php");
     if(isset($_GET['idP'])){
         $idP = $_GET['idP'];
         $query = $connect->prepare ('SELECT * FROM `pokemon` 
@@ -29,9 +29,9 @@
         foreach($array as $pokemon){
             // Decode JSON fields
             $types = json_decode($pokemon["type"], true);
-            // echo '<pre>';
-            // print_r($types);
-            // echo '</pre>';
+            echo '<pre>';
+            print_r($types);
+            echo '</pre>';
             // echo '<pre>';
             // print_r($types["type"][0]);
             // echo '</pre>';
@@ -39,21 +39,26 @@
             $evolutions = json_decode($pokemon["evolution"], true);
             echo '<div><section><h1>' . $pokemon["name"] . '</h1></section>';
             echo '<div>';
-            
-            for($i = 0; $i <= count($types); $i++){
+            echo count($types);
+
+            // for pour afficher les types du pokemon
+            for($i = 0; $i < count($types["type"]); $i++){
                 echo'<div><p>'. $types["type"][$i] . '</p></div>'; 
             }
             
+            // foreach pour afficher les bases
             foreach($bases as $base => $key){
                 echo'<div><p>' . $base . ' '. $key . '</p></div>';
             }
 
+            // foreach pour afficher les evolutions
             foreach($evolutions as $evolution => $key){
                 echo'<div><p>' . $evolution . ' '. $key . '</p></div>';
             }
             echo '</div>';
             echo '<div><img src="assets/pokemon/' .$pokemon["image"] . '" alt="image of ' .$pokemon["name"] . '"><div>';
         }
+        include("assets/php/button.php");
         ?>
 
     </main>
