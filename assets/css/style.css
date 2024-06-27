@@ -1,12 +1,98 @@
-body {
-  font-size: 16px;
-  background-color: #F3F4F6;
+@charset "UTF-8";
+/* Reset des marges et des paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* styles.css */
+body {
+  background-color: rgba(120, 119, 119, 0.248);
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: rgb(49, 49, 49);
+  color: white;
+}
+
+/* Style pour le conteneur principal du formulaire */
+.main {
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les étiquettes des champs */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Style pour les champs de saisie */
+.inputfield {
+  width: 50%;
+  padding: 8px;
+  margin: 0 auto 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* Styles pour le formulaire */
+label {
+  width: 50%;
+  margin: 0 auto 10px auto;
+}
+
+/* Style pour le bouton de soumission */
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Style pour les liens sous le formulaire */
+.form-links {
+  margin-top: 10px;
+}
+
+.form-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+/* Styles pour le logo */
+.logo {
+  display: block;
+  margin: 0 auto;
+  height: 50%;
+  width: 50%;
+}
+
+/* Styles pour le conteneur de la navigation */
 nav {
   display: flex;
-  justify-content: center; /* Centrer horizontalement */
-  align-items: center; /* Centrer verticalement */
+  justify-content: center;
+  align-items: center;
   background-color: white;
   padding: 1em;
 }
@@ -19,141 +105,113 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #F3F4F6;
+  background-color: #555;
 }
 
-.logo {
+nav.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+nav.dark-mode a {
+  color: white;
+}
+
+/* Styles pour le Pokémon */
+.pokemon {
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pokemon img {
+  max-width: 150px;
+  margin-right: 20px;
+}
+
+.stats-info {
+  background-color: #a4a4a4;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
   display: block;
-  margin: 0 auto;
-  width: 25%;
+  color: white;
 }
 
-@media (min-width: 769px) {
-  /* Styles pour les ordinateurs de bureau */
-}
-main .form-login {
-  background-color: white;
-  width: 50%;
-  margin: 5% auto;
-  padding: 1%;
-  border-radius: 10px;
-}
-main .form-login h1 {
-  text-align: center;
-}
-main .form-login form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-main .form-login form .inputfield {
-  background-color: #E5E7EB;
-  border: none;
-  margin-bottom: 2%;
-  padding: 1%;
-}
-main .form-login form label, main .form-login form input {
-  margin-left: 3%;
-  margin-right: 3%;
-}
-main .form-login form .button {
-  width: 16%;
-  text-transform: capitalize;
-  border: none;
-  padding: 1%;
-}
-main .form-login form .button:hover {
-  color: white;
-  background-color: #7e7e7f;
-}
-main .form-login form a {
-  color: #326CB3;
-  text-transform: uppercase;
-}
-main .form-login form a:hover {
-  color: black;
-}
-main .form-register {
-  background-color: white;
-  width: 50%;
-  margin: 5% auto;
-  padding: 1%;
-  border-radius: 10px;
-}
-main .form-register h1 {
-  text-align: center;
-}
-main .form-register form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-main .form-register form .inputfield {
-  background-color: #E5E7EB;
-  border: none;
-  margin-bottom: 2%;
-  padding: 1%;
-}
-main .form-register form label, main .form-register form input {
-  margin-left: 3%;
-  margin-right: 3%;
-}
-main .form-register form .button {
-  width: 20%;
-  text-transform: capitalize;
-  border: none;
-  padding: 1%;
-}
-main .form-register form .button:hover {
-  color: white;
-  background-color: #7e7e7f;
-}
-main .form-register form a {
-  color: #326CB3;
-  text-transform: uppercase;
-}
-main .form-register form a:hover {
-  color: black;
-}
-main .div-detail {
-  display: flex;
-  justify-content: space-around;
-}
-main .div-detail .info-pokemon {
-  background-color: white;
-  width: 40%;
-  margin: 5%;
-  padding: 1%;
-  border-radius: 10px;
-}
-main .div-detail .info-pokemon .div-type {
-  display: flex;
-}
-main .div-detail .info-pokemon .div-type p {
-  padding-right: 2%;
-}
-main .div-detail .info-pokemon .progress-bar {
-  display: flex;
-  flex-direction: column;
-}
-main .div-detail .info-pokemon .progress-bar progress {
-  color: #4B5563;
-  border-radius: 10px;
-}
-
-footer {
-  background-color: white;
+.evolution-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1%;
 }
+
+.evolution-container img {
+  max-width: 100%;
+  margin-bottom: 20px; /* Espace entre les images */
+}
+
+/* Styles pour la colonne */
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles pour le footer */
 footer div svg {
   height: 30px;
 }
-footer .github-perso a {
-  color: #326CB3;
+
+/* Media Queries pour rendre la page responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  .logo {
+    height: 100px;
+    width: 100px;
+  }
+  .pokemon {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pokemon img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .stats-info {
+    padding: 10px;
+  }
+  .inputfield, label {
+    width: 100%;
+  }
 }
-footer .github-perso a:hover {
-  color: black;
-}
+@media (max-width: 480px) {
+  /* Styles pour le conteneur de la navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 1em;
+  }
+  nav a {
+    color: black;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    text-align: center;
+  }
+  nav a:hover {
+    background-color: #555;
+  }
+  .button {
+    width: 100%;
+  }
+  .pokemon img {
+    max-width: 100px;
+  }
+}/*# sourceMappingURL=style.css.map */

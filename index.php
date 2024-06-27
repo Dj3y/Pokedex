@@ -7,23 +7,49 @@
     <title>Pokedex</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-<?php include_once("assets/php/header.php"); ?>
-    <main>
-        <form class="search" action="index.php" method="post">
-            <label for="name">𝒫𝑜𝓀é𝓂𝑜𝓃 𝒩𝒶𝓂𝑒:</label>
-            <input type="text" name="name" id="name" required>
-            <button type="submit" name="search">Search</button>
-        </form>
-        <div class="pokemon-card-container">
-            <?php
-            include("assets/php/engine.php");
-            include("assets/php/pokemon.php");
-            include("assets/php/search.php");
-            ?>
-        </div>
+    <!-- Ajout du fichier header -->
+    <?php 
+        include_once("assets/php/header.php");
+        ?>
+   
+        
+    <!-- contenu body -->
+
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <script src="Darkmode.js"></script>
+     <!-- debut contenu trouver sur BeCode -->
+    <!-- <main>
+    <h1>
+       < ?php echo $_GET['name']; ?>
+    </h1>
+    <a href="/">Homepage</a>
+</main> -->
+<!-- fin contenu trouver sur BeCode -->
+
+     <!-- debut de partie a modifier pour que sa allait avec la base de donnée -->
+<!-- <section id="pokedex" class="col">
+            <h2>Pokedex</h2>
+            <div class="pokemon">
+                <img src="assets/pokemon/abra.png" alt="Abra">
+                <p class="stats-info">Some stats information here</p>
+            </div>
+        </section>
+        <section class="evolution-container">
+            <img class="evolution" src="assets/pokemon/kadabra.png" alt="Evolution 1">
+            <img class="evolution" src="assets/pokemon/evolution2.png" alt="Evolution 2">
+
+       </section> -->
+       <!-- fin de partie a modifier pour que sa allait avec la base de donnée -->
     </main>
-<?php include_once("assets/php/footer.php"); ?>
+    
+    <!-- Ajout du fichier footer -->
+
+    <?php include_once("assets/php/footer.php"); ?>
+    
+
 </body>
 </html>
