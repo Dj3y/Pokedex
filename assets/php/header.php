@@ -7,7 +7,7 @@
         <a href="assets/php/login.php">My account</a>
         <a href="assets/php/register.php">Register</a>
     
-     
+        
     </nav>
    
 </header>

@@ -13,10 +13,12 @@
     <?php 
         include_once("assets/php/header.php");
         ?>
+   
         
     <!-- contenu body -->
-    <i id="theme-toggle" class="fas fa-moon theme-toggle"></i>
-    <script src="/tools/theme-toggle.js"></script>
+
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <script src="Darkmode.js"></script>
      <!-- debut contenu trouver sur BeCode -->
     <!-- <main>
     <h1>
