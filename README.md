@@ -84,3 +84,10 @@ Develop a Pokedex application using PHP procedural programming. The application 
 
 ### License:
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+# qui a fait quoi : 
+Zahra: page index,
+Nathanaël : base de donnée,page login,page registrer,
+Dzheylyan : PN ,page detail 
+Stacy : css , bouton dark mode ,README
