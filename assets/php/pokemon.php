@@ -15,7 +15,11 @@
                 
                 
                 $nbr = 20;
+                if(!empty($_GET['page'])){
                 $page = $_GET['page'];
+                }else{
+                    $page = 1;
+                }
 
                 for($i = 0; $i < $nbr; $i ++){
                     $value = $results[$i + (20 * ($page - 1))];
