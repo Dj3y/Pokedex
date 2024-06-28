@@ -18,8 +18,8 @@
 
     echo "<main class='formCase'>";
     ?>
-    <section class = "form-register">
-    <h1>Register</h1>
+    <section class="form-register">
+        <h1>Register</h1>
         <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
             <label>Username: </label><input type="text" name="username" class="inputfield"><br>
             <label>Password: </label><input type="password" name="password" class="inputfield" id="password"><br>

@@ -1,0 +1,119 @@
+.Bug {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #729F3F;
+}
+
+.Dragon {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background: rgb(83, 164, 207);
+  background: -moz-linear-gradient(360deg, rgb(83, 164, 207) 0%, rgb(241, 110, 87) 100%);
+  background: -webkit-linear-gradient(360deg, rgb(83, 164, 207) 0%, rgb(241, 110, 87) 100%);
+  background: linear-gradient(360deg, rgb(83, 164, 207) 0%, rgb(241, 110, 87) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#53a4cf", endColorstr="#f16e57", GradientType=1);
+}
+
+.Fairy {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #FDB9E9;
+}
+
+.Fire {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #FD7D24;
+}
+
+.Ghost {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #7B62A3;
+}
+
+.Ground {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background: rgb(171, 152, 66);
+  background: -moz-linear-gradient(360deg, rgb(171, 152, 66) 25%, rgb(247, 222, 63) 100%);
+  background: -webkit-linear-gradient(360deg, rgb(171, 152, 66) 25%, rgb(247, 222, 63) 100%);
+  background: linear-gradient(360deg, rgb(171, 152, 66) 25%, rgb(247, 222, 63) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ab9842",endColorstr="#f7de3f",GradientType=1);
+}
+
+.Normal {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #A4ACAF;
+}
+
+.Psychic {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #F366B9;
+}
+
+.Steel {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #9EB7B8;
+}
+
+.Dark {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #707070;
+}
+
+.Electric {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #EED535;
+}
+
+.Fighting {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #D56723;
+}
+
+.Flying {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background: rgb(189, 185, 184);
+  background: -moz-linear-gradient(360deg, rgb(189, 185, 184) 0%, rgb(61, 199, 239) 100%);
+  background: -webkit-linear-gradient(360deg, rgb(189, 185, 184) 0%, rgb(61, 199, 239) 100%);
+  background: linear-gradient(360deg, rgb(189, 185, 184) 0%, rgb(61, 199, 239) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bdb9b8",endColorstr="#3dc7ef",GradientType=1);
+}
+
+.Grass {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #9BCC50;
+}
+
+.Ice {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #51C4E7;
+}
+
+.Poison {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #B97FC9;
+}
+
+.Rock {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #A38C21;
+}
+
+.Water {
+  border-radius: 5px;
+  padding: 1% 2%;
+  background-color: #4592C4;
+}

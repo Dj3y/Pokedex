@@ -1,0 +1,105 @@
+@mixin styleType{
+    border-radius: 5px;
+    padding: 1% 2%; 
+}
+.Bug{
+    @include styleType;
+    background-color: #729F3F;
+}
+
+.Dragon{
+    @include styleType;
+    background: rgba(83, 164, 207, 1);
+    background: -moz-linear-gradient(360deg, rgba(83, 164, 207, 1) 0%, rgba(241, 110, 87, 1) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(83, 164, 207, 1) 0%, rgba(241, 110, 87, 1) 100%);
+    background: linear-gradient(360deg, rgba(83, 164, 207, 1) 0%, rgba(241, 110, 87, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#53a4cf", endColorstr="#f16e57", GradientType=1);
+}
+
+.Fairy{
+    @include styleType;
+    background-color: #FDB9E9;
+}
+
+.Fire{
+    @include styleType;
+    background-color: #FD7D24;
+}
+
+.Ghost{
+    @include styleType;
+    background-color: #7B62A3;
+}
+
+.Ground{
+    @include styleType;
+    background: rgb(171,152,66);
+    background: -moz-linear-gradient(360deg, rgba(171,152,66,1) 25%, rgba(247,222,63,1) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(171,152,66,1) 25%, rgba(247,222,63,1) 100%);
+    background: linear-gradient(360deg, rgba(171,152,66,1) 25%, rgba(247,222,63,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ab9842",endColorstr="#f7de3f",GradientType=1);
+}
+
+.Normal{
+    @include styleType;
+    background-color: #A4ACAF;
+}
+
+.Psychic{
+    @include styleType;
+    background-color: #F366B9;
+}
+
+.Steel{
+    @include styleType;
+    background-color: #9EB7B8;
+}
+
+.Dark{
+    @include styleType;
+    background-color: #707070;
+}
+
+.Electric{
+    @include styleType;
+    background-color: #EED535;
+}
+
+.Fighting{
+    @include styleType;
+    background-color: #D56723;
+}
+
+.Flying{
+    @include styleType;
+    background: rgb(189,185,184);
+    background: -moz-linear-gradient(360deg, rgba(189,185,184,1) 0%, rgba(61,199,239,1) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(189,185,184,1) 0%, rgba(61,199,239,1) 100%);
+    background: linear-gradient(360deg, rgba(189,185,184,1) 0%, rgba(61,199,239,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bdb9b8",endColorstr="#3dc7ef",GradientType=1);
+}
+
+.Grass{
+    @include styleType;
+    background-color: #9BCC50;
+}
+
+.Ice{
+    @include styleType;
+    background-color: #51C4E7;
+}
+
+.Poison{
+    @include styleType;
+    background-color: #B97FC9;
+}
+
+.Rock{
+    @include styleType;
+    background-color: #A38C21;
+}
+
+.Water{
+    @include styleType;
+    background-color: #4592C4;
+}

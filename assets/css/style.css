@@ -115,14 +115,80 @@ main .form-register form a {
 main .form-register form a:hover {
   color: black;
 }
-main .pokemon-card-container {
+main .div-detail {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: space-around;
 }
-main .pokemon-card-container .pokemon-card {
+main .div-detail .info-pokemon {
+  background-color: white;
+  width: 40%;
+  margin: 5%;
+  padding: 1%;
+  border-radius: 10px;
+}
+main .div-detail .info-pokemon h1 {
+  margin: 0;
+}
+main .div-detail .info-pokemon .div-type {
+  display: flex;
+}
+main .div-detail .info-pokemon .div-type p {
+  padding-right: 2%;
+  margin-right: 3%;
+}
+main .div-detail .info-pokemon .progress-bar {
+  width: 100%;
+}
+main .div-detail .info-pokemon .progress-bar .bar {
+  display: flex;
+  flex-direction: column;
+}
+main .div-detail .info-pokemon .progress-bar .bar label {
+  width: 150px;
+}
+main .div-detail .info-pokemon .progress-bar .bar progress {
+  width: 100%;
+  height: 20px;
+  border-radius: 15px;
+}
+main .div-detail .info-pokemon .progress-bar .bar progress::-webkit-progress-bar {
+  background-color: #E5E7EB;
+  border-radius: 15px;
+}
+main .div-detail .info-pokemon .progress-bar .bar progress::-webkit-progress-value {
+  background-color: #4E5866;
+  border-radius: 15px;
+}
+main .div-detail .info-pokemon .progress-bar .bar progress::-moz-progress-bar {
+  background: #E5E7EB;
+  background-color: #4E5866;
+  border-radius: 15px;
+}
+main .evolution {
   display: flex;
   justify-content: center;
+}
+main .evolution div {
+  width: 30%;
+  text-align: center;
+}
+main .evolution div img {
+  width: 7em;
+  background-color: #E5E7EB;
+  border-radius: 10px;
+  padding: 1%;
+  border: 3px solid #4677B1;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+main .evolution div img:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+main .evolution div p {
+  text-transform: capitalize;
+}
+main .img-pokemon {
+  display: flex;
+  align-items: center;
 }
 
 footer {
