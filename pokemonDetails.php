@@ -1,6 +1,7 @@
 <?php
      include("assets/php/engine.php");
-    if(isset($_GET['idP'])){
+    
+     if(isset($_GET['idP'])){
         $idP = $_GET['idP'];
         $query = $connect->prepare ('SELECT * FROM `pokemon` 
                     WHERE id =?');
@@ -11,7 +12,6 @@
         // var_dump($array); //affiche toute la table pokemon
         // var_dump($array[0]["base"][2] . $array[0]["base"][3]); // affiche que l'info de l'index 0 colonne base et l'index 2 et 3 => HP
         // echo '</pre>';
-       
     }
 ?>
 <!DOCTYPE html>
@@ -27,6 +27,7 @@
 <body>
     <?php include_once("assets/php/header.php"); ?>
     <main>
+        
         <?php
         foreach($array as $pokemon){
             // Decode JSON fields
@@ -51,19 +52,27 @@
 
             echo'<div class = "progress-bar">';
             // foreach pour afficher les bases
-            foreach($bases as $base => $key){
-                echo'<label for="file">' . $base . '</label><progress class="progress" id="file" max="100" value="' .$key . '">' .$key . '</progress>';
-            }
+           // foreach pour afficher les bases
+           foreach($bases as $base => $key){
+            echo'<div class="bar"><label for="file">' . $base . '</label><progress id="file" max="100" value="' .$key . '">' .$key . '</progress></div>';
+           }
             echo '</div>';
 
-            echo'<div>';
+            echo'<section">';
+            echo'<h3>Evolution</h3>';
+            echo'<div class = "evolution">';
             // foreach pour afficher les evolutions
-            foreach($evolutions as $evolution => $key){
-                echo'<p>' . $evolution . ' '. $key . '</p>';
+            for($i = 0; $i < count($evolutions["evolution"]); $i++){
+                    // foreach ($array as $value) {
+                    echo '<a href="pokemonDetails.php?idPokemon='. $pokemon["id"] .'">';
+                    echo'<div><img src="assets/pokemon/' . $evolutions["evolution"][$i] . '.png" alt="image of ' . $evolutions["evolution"][$i] . '">';
+                    echo'<p>' . $evolutions["evolution"][$i] . '</p></a></div>';
+                // }
             }
             echo'</div>';
+            echo'</section>';
             echo '</section>';
-            echo '<div><img src="assets/pokemon/' .$pokemon["image"] . '" alt="image of ' .$pokemon["name"] . '"><div>';
+            echo '<div class = "img-pokemon"><img src="assets/pokemon/' .$pokemon["image"] . '" alt="image of ' . $pokemon["name"] . '"><div>';
         }
         include("assets/php/button.php");
         ?>
