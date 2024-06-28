@@ -64,7 +64,7 @@
             // foreach pour afficher les evolutions
             for($i = 0; $i < count($evolutions["evolution"]); $i++){
                     // foreach ($array as $value) {
-                    echo '<a href="pokemonDetails.php?idPokemon='. $pokemon["id"] .'">';
+                    echo '<a href="showPokemon.php?idP='. $evolutions["evolution"][$i] .'.png">';
                     echo'<div><img src="assets/pokemon/' . $evolutions["evolution"][$i] . '.png" alt="image of ' . $evolutions["evolution"][$i] . '">';
                     echo'<p>' . $evolutions["evolution"][$i] . '</p></a></div>';
                 // }
@@ -72,7 +72,7 @@
             echo'</div>';
             echo'</section>';
             echo '</section>';
-            echo '<div class = "img-pokemon"><img src="assets/pokemon/' .$pokemon["image"] . '" alt="image of ' . $pokemon["name"] . '"><div>';
+            echo '<div class = "img-pokemon"><p>&#35;0'. $pokemon["id"] .'</p><img src="assets/pokemon/' .$pokemon["image"] . '" alt="image of ' . $pokemon["name"] . '"><div>';
         }
         include("assets/php/button.php");
         ?>

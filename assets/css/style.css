@@ -190,6 +190,16 @@ main .img-pokemon {
   display: flex;
   align-items: center;
 }
+main .img-pokemon p {
+  font-size: 300px;
+  color: #E5E7EB;
+  margin: -60% auto 0;
+  font-weight: bold;
+}
+main .img-pokemon img {
+  width: 25em;
+  position: absolute;
+}
 
 footer {
   background-color: white;
