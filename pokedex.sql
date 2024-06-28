@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
---php Généré le : lun. 24 juin 2024 à 11:24
+-- Généré le : ven. 28 juin 2024 à 16:36
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -41,7 +41,7 @@ CREATE TABLE `pokemon` (
 --
 
 INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUES
-(1, 'Bulbizarre', '{ \"type\":[\"Grass\",\"Poison\"]}', '{\"HP\":45,\"Attack\":49,\"Defense\":49,\"Sp. Attack\":65,\"Sp. Defense\":65,\"Speed\":45}', '{}', 'Bulbasaur.png'),
+(1, 'Bulbizarre', '{ \"type\":[\"Grass\",\"Poison\"]}', '{\"HP\":45,\"Attack\":49,\"Defense\":49,\"Sp. Attack\":65,\"Sp. Defense\":65,\"Speed\":45}', '{ \"evolution\":[\"Bulbasau\",\"Ivysaur\",\"Venusaur\"]}', 'Bulbasaur.png'),
 (2, 'Herbizarre', '{ \"type\":[\"Grass\",\"Poison\"]}', '{\"HP\":60,\"Attack\":62,\"Defense\":63,\"Sp. Attack\":80,\"Sp. Defense\":80,\"Speed\":60}', '{}', 'Ivysaur.png'),
 (3, 'Florizarre', '{ \"type\":[\"Grass\",\"Poison\"]}', '{\"HP\":80,\"Attack\":82,\"Defense\":83,\"Sp. Attack\":100,\"Sp. Defense\":100,\"Speed\":80}', '{}', 'Venusaur.png'),
 (4, 'Salamèche', '{ \"type\":[\"Fire\"]}', '{\"HP\":39,\"Attack\":52,\"Defense\":43,\"Sp. Attack\":60,\"Sp. Defense\":50,\"Speed\":65}', '{}', 'Charmander.png'),
@@ -63,8 +63,8 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (20, 'Rattatac', '{ \"type\":[\"Normal\"]}', '{\"HP\":55,\"Attack\":81,\"Defense\":60,\"Sp. Attack\":50,\"Sp. Defense\":70,\"Speed\":97}', '{}', 'Raticate.png'),
 (21, 'Piafabec', '{ \"type\":[\"Normal\",\"Flying\"]}', '{\"HP\":40,\"Attack\":60,\"Defense\":30,\"Sp. Attack\":31,\"Sp. Defense\":31,\"Speed\":70}', '{}', 'Spearow.png'),
 (22, 'Rapasdepic', '{ \"type\":[\"Normal\",\"Flying\"]}', '{\"HP\":65,\"Attack\":90,\"Defense\":65,\"Sp. Attack\":61,\"Sp. Defense\":61,\"Speed\":100}', '{}', 'Fearow.png'),
-(23, 'Abo', '{ \"type\":[\"Poison\"]}', '{\"HP\":35,\"Attack\":60,\"Defense\":44,\"Sp. Attack\":40,\"Sp. Defense\":54,\"Speed\":55}', '{}', 'Ekans.png'),
-(24, 'Arbok', '{ \"type\":[\"Poison\"]}', '{\"HP\":60,\"Attack\":95,\"Defense\":69,\"Sp. Attack\":65,\"Sp. Defense\":79,\"Speed\":80}', '{}', 'Arbok.png'),
+(23, 'Abo', '{ \"type\":[\"Poison\"]}', '{\"HP\":35,\"Attack\":60,\"Defense\":44,\"Sp. Attack\":40,\"Sp. Defense\":54,\"Speed\":55}', '{\"evolution\":[\"Ekans\",\"Arbok\"]}', 'Ekans.png'),
+(24, 'Arbok', '{ \"type\":[\"Poison\"]}', '{\"HP\":60,\"Attack\":95,\"Defense\":69,\"Sp. Attack\":65,\"Sp. Defense\":79,\"Speed\":80}', '{\"evolution\":[\"Ekans\",\"Arbok\"]}', 'Arbok.png'),
 (25, 'Pikachu', '{ \"type\":[\"Electric\"]}', '{\"HP\":35,\"Attack\":55,\"Defense\":40,\"Sp. Attack\":50,\"Sp. Defense\":50,\"Speed\":90}', '{}', 'Pikachu.png'),
 (26, 'Raichu', '{ \"type\":[\"Electric\"]}', '{\"HP\":60,\"Attack\":90,\"Defense\":55,\"Sp. Attack\":90,\"Sp. Defense\":80,\"Speed\":110}', '{}', 'Raichu.png'),
 (27, 'Sabelette', '{ \"type\":[\"Ground\"]}', '{\"HP\":50,\"Attack\":75,\"Defense\":85,\"Sp. Attack\":20,\"Sp. Defense\":30,\"Speed\":40}', '{}', 'Sandshrew.png'),
@@ -89,13 +89,13 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (46, 'Paras', '{ \"type\":[\"Bug\",\"Grass\"]}', '{\"HP\":35,\"Attack\":70,\"Defense\":55,\"Sp. Attack\":45,\"Sp. Defense\":55,\"Speed\":25}', '{}', 'Paras.png'),
 (47, 'Parasect', '{ \"type\":[\"Bug\",\"Grass\"]}', '{\"HP\":60,\"Attack\":95,\"Defense\":80,\"Sp. Attack\":60,\"Sp. Defense\":80,\"Speed\":30}', '{}', 'Parasect.png'),
 (48, 'Mimitoss', '{ \"type\":[\"Bug\",\"Poison\"]}', '{\"HP\":60,\"Attack\":55,\"Defense\":50,\"Sp. Attack\":40,\"Sp. Defense\":55,\"Speed\":45}', '{}', 'Venonat.png'),
-(49, 'Aéromite', '{ \"type\":[\"Bug\",\"Poison\"]}', '{\"HP\":70,\"Attack\":65,\"Defense\":60,\"Sp. Attack\":90,\"Sp. Defense\":75,\"Speed\":90}', '{}', 'Venomoth.png'),
+(49, 'Aéromite', '{ \"type\":[\"Bug\",\"Poison\"]}', '{\"HP\":70,\"Attack\":65,\"Defense\":60,\"Sp. Attack\":90,\"Sp. Defense\":75,\"Speed\":90}', '{\"evolution\":[\"Venonat\",\"Venomoth\"]}', 'Venomoth.png'),
 (50, 'Taupiqueur', '{ \"type\":[\"Ground\"]}', '{\"HP\":10,\"Attack\":55,\"Defense\":25,\"Sp. Attack\":35,\"Sp. Defense\":45,\"Speed\":95}', '{}', 'Diglett.png'),
 (51, 'Triopikeur', '{ \"type\":[\"Ground\"]}', '{\"HP\":35,\"Attack\":100,\"Defense\":50,\"Sp. Attack\":50,\"Sp. Defense\":70,\"Speed\":120}', '{}', 'Dugtrio.png'),
 (52, 'Miaouss', '{ \"type\":[\"Normal\"]}', '{\"HP\":40,\"Attack\":45,\"Defense\":35,\"Sp. Attack\":40,\"Sp. Defense\":40,\"Speed\":90}', '{}', 'Meowth.png'),
 (53, 'Persian', '{ \"type\":[\"Normal\"]}', '{\"HP\":65,\"Attack\":70,\"Defense\":60,\"Sp. Attack\":65,\"Sp. Defense\":65,\"Speed\":115}', '{}', 'Persian.png'),
 (54, 'Psykokwak', '{ \"type\":[\"Water\"]}', '{\"HP\":50,\"Attack\":52,\"Defense\":48,\"Sp. Attack\":65,\"Sp. Defense\":50,\"Speed\":55}', '{}', 'Psyduck.png'),
-(55, 'Akwakwak', '{ \"type\":[\"Water\"]}', '{\"HP\":80,\"Attack\":82,\"Defense\":78,\"Sp. Attack\":95,\"Sp. Defense\":80,\"Speed\":85}', '{}', 'Golduck.png'),
+(55, 'Akwakwak', '{ \"type\":[\"Water\"]}', '{\"HP\":80,\"Attack\":82,\"Defense\":78,\"Sp. Attack\":95,\"Sp. Defense\":80,\"Speed\":85}', '{\"evolution\":[\"Psyduck\", \"Golduck\"]}', 'Golduck.png'),
 (56, 'Férosinge', '{ \"type\":[\"Fighting\"]}', '{\"HP\":40,\"Attack\":80,\"Defense\":35,\"Sp. Attack\":35,\"Sp. Defense\":45,\"Speed\":70}', '{}', 'Mankey.png'),
 (57, 'Colossinge', '{ \"type\":[\"Fighting\"]}', '{\"HP\":65,\"Attack\":105,\"Defense\":60,\"Sp. Attack\":60,\"Sp. Defense\":70,\"Speed\":95}', '{}', 'Primeape.png'),
 (58, 'Caninos', '{ \"type\":[\"Fire\"]}', '{\"HP\":55,\"Attack\":70,\"Defense\":45,\"Sp. Attack\":70,\"Sp. Defense\":50,\"Speed\":60}', '{}', 'Growlithe.png'),
@@ -103,9 +103,9 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (60, 'Ptitard', '{ \"type\":[\"Water\"]}', '{\"HP\":40,\"Attack\":50,\"Defense\":40,\"Sp. Attack\":40,\"Sp. Defense\":40,\"Speed\":90}', '{}', 'Poliwag.png'),
 (61, 'Têtarte', '{ \"type\":[\"Water\"]}', '{\"HP\":65,\"Attack\":65,\"Defense\":65,\"Sp. Attack\":50,\"Sp. Defense\":50,\"Speed\":90}', '{}', 'Poliwhirl.png'),
 (62, 'Tartard', '{ \"type\":[\"Water\",\"Fighting\"]}', '{\"HP\":90,\"Attack\":95,\"Defense\":95,\"Sp. Attack\":70,\"Sp. Defense\":90,\"Speed\":70}', '{}', 'Poliwrath.png'),
-(63, 'Abra', '{ \"type\":[\"Psychic\"]}', '{\"HP\":25,\"Attack\":20,\"Defense\":15,\"Sp. Attack\":105,\"Sp. Defense\":55,\"Speed\":90}', '{}', 'Abra.png'),
-(64, 'Kadabra', '{ \"type\":[\"Psychic\"]}', '{\"HP\":40,\"Attack\":35,\"Defense\":30,\"Sp. Attack\":120,\"Sp. Defense\":70,\"Speed\":105}', '{}', 'Kadabra.png'),
-(65, 'Alakazam', '{ \"type\":[\"Psychic\"]}', '{\"HP\":55,\"Attack\":50,\"Defense\":45,\"Sp. Attack\":135,\"Sp. Defense\":95,\"Speed\":120}', '{}', 'Alakazam.png'),
+(63, 'Abra', '{ \"type\":[\"Psychic\"]}', '{\"HP\":25,\"Attack\":20,\"Defense\":15,\"Sp. Attack\":105,\"Sp. Defense\":55,\"Speed\":90}', '{\"evolution\":[\"Kadabra\",\"Alakazam\",\"Mega-alakazam\"]}', 'Abra.png'),
+(64, 'Kadabra', '{ \"type\":[\"Psychic\"]}', '{\"HP\":40,\"Attack\":35,\"Defense\":30,\"Sp. Attack\":120,\"Sp. Defense\":70,\"Speed\":105}', '{\"evolution\":[\"Kadabra\",\"Alakazam\",\"Mega-alakazam\"]}', 'Kadabra.png'),
+(65, 'Alakazam', '{ \"type\":[\"Psychic\"]}', '{\"HP\":55,\"Attack\":50,\"Defense\":45,\"Sp. Attack\":135,\"Sp. Defense\":95,\"Speed\":120}', '{\"evolution\":[\"Kadabra\",\"Alakazam\",\"Mega-alakazam\"]}', 'Alakazam.png'),
 (66, 'Machoc', '{ \"type\":[\"Fighting\"]}', '{\"HP\":70,\"Attack\":80,\"Defense\":50,\"Sp. Attack\":35,\"Sp. Defense\":35,\"Speed\":35}', '{}', 'Machop.png'),
 (67, 'Machopeur', '{ \"type\":[\"Fighting\"]}', '{\"HP\":80,\"Attack\":100,\"Defense\":70,\"Sp. Attack\":50,\"Sp. Defense\":60,\"Speed\":45}', '{}', 'Machoke.png'),
 (68, 'Mackogneur', '{ \"type\":[\"Fighting\"]}', '{\"HP\":90,\"Attack\":130,\"Defense\":80,\"Sp. Attack\":65,\"Sp. Defense\":85,\"Speed\":55}', '{}', 'Machamp.png'),
@@ -174,12 +174,12 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (131, 'Lokhlass', '{ \"type\":[\"Water\",\"Ice\"]}', '{\"HP\":130,\"Attack\":85,\"Defense\":80,\"Sp. Attack\":85,\"Sp. Defense\":95,\"Speed\":60}', '{}', 'Lapras.png'),
 (132, 'Métamorph', '{ \"type\":[\"Normal\"]}', '{\"HP\":48,\"Attack\":48,\"Defense\":48,\"Sp. Attack\":48,\"Sp. Defense\":48,\"Speed\":48}', '{}', 'Ditto.png'),
 (133, 'Évoli', '{ \"type\":[\"Normal\"]}', '{\"HP\":55,\"Attack\":55,\"Defense\":50,\"Sp. Attack\":45,\"Sp. Defense\":65,\"Speed\":55}', '{}', 'Eevee.png'),
-(134, 'Aquali', '{ \"type\":[\"Water\"]}', '{\"HP\":130,\"Attack\":65,\"Defense\":60,\"Sp. Attack\":110,\"Sp. Defense\":95,\"Speed\":65}', '{}', 'Vaporeon.png'),
+(134, 'Aquali', '{ \"type\":[\"Water\"]}', '{\"HP\":130,\"Attack\":65,\"Defense\":60,\"Sp. Attack\":110,\"Sp. Defense\":95,\"Speed\":65}', '{\"evolution\":[\"Vaporeon\", \"Jolteon\", \"Flareon\", \"Espeon\"]}', 'Vaporeon.png'),
 (135, 'Voltali', '{ \"type\":[\"Electric\"]}', '{\"HP\":65,\"Attack\":65,\"Defense\":60,\"Sp. Attack\":110,\"Sp. Defense\":95,\"Speed\":130}', '{}', 'Jolteon.png'),
 (136, 'Pyroli', '{ \"type\":[\"Fire\"]}', '{\"HP\":65,\"Attack\":130,\"Defense\":60,\"Sp. Attack\":95,\"Sp. Defense\":110,\"Speed\":65}', '{}', 'Flareon.png'),
 (137, 'Porygon', '{ \"type\":[\"Normal\"]}', '{\"HP\":65,\"Attack\":60,\"Defense\":70,\"Sp. Attack\":85,\"Sp. Defense\":75,\"Speed\":40}', '{}', 'Porygon.png'),
-(138, 'Amonita', '{ \"type\":[\"Rock\",\"Water\"]}', '{\"HP\":35,\"Attack\":40,\"Defense\":100,\"Sp. Attack\":90,\"Sp. Defense\":55,\"Speed\":35}', '{}', 'Omanyte.png'),
-(139, 'Amonistar', '{ \"type\":[\"Rock\",\"Water\"]}', '{\"HP\":70,\"Attack\":60,\"Defense\":125,\"Sp. Attack\":115,\"Sp. Defense\":70,\"Speed\":55}', '{}', 'Omastar.png'),
+(138, 'Amonita', '{ \"type\":[\"Rock\",\"Water\"]}', '{\"HP\":35,\"Attack\":40,\"Defense\":100,\"Sp. Attack\":90,\"Sp. Defense\":55,\"Speed\":35}', '{\"evolution\":[\"Omanyte\", \"Omastar\"]}', 'Omanyte.png'),
+(139, 'Amonistar', '{ \"type\":[\"Rock\",\"Water\"]}', '{\"HP\":70,\"Attack\":60,\"Defense\":125,\"Sp. Attack\":115,\"Sp. Defense\":70,\"Speed\":55}', '{\"evolution\":[\"Omanyte\", \"Omastar\"]}', 'Omastar.png'),
 (140, 'Kabuto', '{ \"type\":[\"Rock\",\"Water\"]}', '{\"HP\":30,\"Attack\":80,\"Defense\":90,\"Sp. Attack\":55,\"Sp. Defense\":45,\"Speed\":55}', '{}', 'Kabuto.png'),
 (141, 'Kabutops', '{ \"type\":[\"Rock\",\"Water\"]}', '{\"HP\":60,\"Attack\":115,\"Defense\":105,\"Sp. Attack\":65,\"Sp. Defense\":70,\"Speed\":80}', '{}', 'Kabutops.png'),
 (142, 'Ptéra', '{ \"type\":[\"Rock\",\"Flying\"]}', '{\"HP\":80,\"Attack\":105,\"Defense\":65,\"Sp. Attack\":60,\"Sp. Defense\":75,\"Speed\":130}', '{}', 'Aerodactyl.png'),
@@ -200,7 +200,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (157, 'Typhlosion', '{ \"type\":[\"Fire\"]}', '{\"HP\":78,\"Attack\":84,\"Defense\":78,\"Sp. Attack\":109,\"Sp. Defense\":85,\"Speed\":100}', '{}', 'Typhlosion.png'),
 (158, 'Kaiminus', '{ \"type\":[\"Water\"]}', '{\"HP\":50,\"Attack\":65,\"Defense\":64,\"Sp. Attack\":44,\"Sp. Defense\":48,\"Speed\":43}', '{}', 'Totodile.png'),
 (159, 'Crocrodil', '{ \"type\":[\"Water\"]}', '{\"HP\":65,\"Attack\":80,\"Defense\":80,\"Sp. Attack\":59,\"Sp. Defense\":63,\"Speed\":58}', '{}', 'Croconaw.png'),
-(160, 'Aligatueur', '{ \"type\":[\"Water\"]}', '{\"HP\":85,\"Attack\":105,\"Defense\":100,\"Sp. Attack\":79,\"Sp. Defense\":83,\"Speed\":78}', '{}', 'Feraligatr.png'),
+(160, 'Aligatueur', '{ \"type\":[\"Water\"]}', '{\"HP\":85,\"Attack\":105,\"Defense\":100,\"Sp. Attack\":79,\"Sp. Defense\":83,\"Speed\":78}', '{\"evolution\":[\"Totodile\", \"Croconaw\", \"Feraligatr\"]}', 'Feraligatr.png'),
 (161, 'Fouinette', '{ \"type\":[\"Normal\"]}', '{\"HP\":35,\"Attack\":46,\"Defense\":34,\"Sp. Attack\":35,\"Sp. Defense\":45,\"Speed\":20}', '{}', 'Sentret.png'),
 (162, 'Fouinar', '{ \"type\":[\"Normal\"]}', '{\"HP\":85,\"Attack\":76,\"Defense\":64,\"Sp. Attack\":45,\"Sp. Defense\":55,\"Speed\":90}', '{}', 'Furret.png'),
 (163, 'Hoothoot', '{ \"type\":[\"Normal\",\"Flying\"]}', '{\"HP\":60,\"Attack\":30,\"Defense\":30,\"Sp. Attack\":36,\"Sp. Defense\":56,\"Speed\":50}', '{}', 'Hoothoot.png'),
@@ -267,7 +267,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (224, 'Octillery', '{ \"type\":[\"Water\"]}', '{\"HP\":75,\"Attack\":105,\"Defense\":75,\"Sp. Attack\":105,\"Sp. Defense\":75,\"Speed\":45}', '{}', 'Octillery.png'),
 (225, 'Cadoizo', '{ \"type\":[\"Ice\",\"Flying\"]}', '{\"HP\":45,\"Attack\":55,\"Defense\":45,\"Sp. Attack\":65,\"Sp. Defense\":45,\"Speed\":75}', '{}', 'Delibird.png'),
 (226, 'Démanta', '{ \"type\":[\"Water\",\"Flying\"]}', '{\"HP\":85,\"Attack\":40,\"Defense\":70,\"Sp. Attack\":80,\"Sp. Defense\":140,\"Speed\":70}', '{}', 'Mantine.png'),
-(227, 'Airmure', '{ \"type\":[\"Steel\",\"Flying\"]}', '{\"HP\":65,\"Attack\":80,\"Defense\":140,\"Sp. Attack\":40,\"Sp. Defense\":70,\"Speed\":70}', '{}', 'Skarmory.png'),
+(227, 'Airmure', '{ \"type\":[\"Steel\",\"Flying\"]}', '{\"HP\":65,\"Attack\":80,\"Defense\":140,\"Sp. Attack\":40,\"Sp. Defense\":70,\"Speed\":70}', '{\"evolution\":[\"This Pokémon does not evolve.\"]}', 'Skarmory.png'),
 (228, 'Malosse', '{ \"type\":[\"Dark\",\"Fire\"]}', '{\"HP\":45,\"Attack\":60,\"Defense\":30,\"Sp. Attack\":80,\"Sp. Defense\":50,\"Speed\":65}', '{}', 'Houndour.png'),
 (229, 'Démolosse', '{ \"type\":[\"Dark\",\"Fire\"]}', '{\"HP\":75,\"Attack\":90,\"Defense\":50,\"Sp. Attack\":110,\"Sp. Defense\":80,\"Speed\":95}', '{}', 'Houndoom.png'),
 (230, 'Hyporoi', '{ \"type\":[\"Water\",\"Dragon\"]}', '{\"HP\":75,\"Attack\":95,\"Defense\":95,\"Sp. Attack\":95,\"Sp. Defense\":95,\"Speed\":85}', '{}', 'Kingdra.png'),
@@ -323,7 +323,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (280, 'Tarsal', '{ \"type\":[\"Psychic\",\"Fairy\"]}', '{\"HP\":28,\"Attack\":25,\"Defense\":25,\"Sp. Attack\":45,\"Sp. Defense\":35,\"Speed\":40}', '{}', 'Ralts.png'),
 (281, 'Kirlia', '{ \"type\":[\"Psychic\",\"Fairy\"]}', '{\"HP\":38,\"Attack\":35,\"Defense\":35,\"Sp. Attack\":65,\"Sp. Defense\":55,\"Speed\":50}', '{}', 'Kirlia.png'),
 (282, 'Gardevoir', '{ \"type\":[\"Psychic\",\"Fairy\"]}', '{\"HP\":68,\"Attack\":65,\"Defense\":65,\"Sp. Attack\":125,\"Sp. Defense\":115,\"Speed\":80}', '{}', 'Gardevoir.png'),
-(283, 'Arakdo', '{ \"type\":[\"Bug\",\"Water\"]}', '{\"HP\":40,\"Attack\":30,\"Defense\":32,\"Sp. Attack\":50,\"Sp. Defense\":52,\"Speed\":65}', '{}', 'Surskit.png'),
+(283, 'Arakdo', '{ \"type\":[\"Bug\",\"Water\"]}', '{\"HP\":40,\"Attack\":30,\"Defense\":32,\"Sp. Attack\":50,\"Sp. Defense\":52,\"Speed\":65}', '{\"evolution\":[\"Surskit\", \"Masquerain\"]}', 'Surskit.png'),
 (284, 'Maskadra', '{ \"type\":[\"Bug\",\"Flying\"]}', '{\"HP\":70,\"Attack\":60,\"Defense\":62,\"Sp. Attack\":100,\"Sp. Defense\":82,\"Speed\":80}', '{}', 'Masquerain.png'),
 (285, 'Balignon', '{ \"type\":[\"Grass\"]}', '{\"HP\":60,\"Attack\":40,\"Defense\":60,\"Sp. Attack\":40,\"Sp. Defense\":60,\"Speed\":35}', '{}', 'Shroomish.png'),
 (286, 'Chapignon', '{ \"type\":[\"Grass\",\"Fighting\"]}', '{\"HP\":60,\"Attack\":130,\"Defense\":80,\"Sp. Attack\":60,\"Sp. Defense\":60,\"Speed\":70}', '{}', 'Breloom.png'),
@@ -338,12 +338,12 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (295, 'Brouhabam', '{ \"type\":[\"Normal\"]}', '{\"HP\":104,\"Attack\":91,\"Defense\":63,\"Sp. Attack\":91,\"Sp. Defense\":73,\"Speed\":68}', '{}', 'Exploud.png'),
 (296, 'Makuhita', '{ \"type\":[\"Fighting\"]}', '{\"HP\":72,\"Attack\":60,\"Defense\":30,\"Sp. Attack\":20,\"Sp. Defense\":30,\"Speed\":25}', '{}', 'Makuhita.png'),
 (297, 'Hariyama', '{ \"type\":[\"Fighting\"]}', '{\"HP\":144,\"Attack\":120,\"Defense\":60,\"Sp. Attack\":40,\"Sp. Defense\":60,\"Speed\":50}', '{}', 'Hariyama.png'),
-(298, 'Azurill', '{ \"type\":[\"Normal\",\"Fairy\"]}', '{\"HP\":50,\"Attack\":20,\"Defense\":40,\"Sp. Attack\":20,\"Sp. Defense\":40,\"Speed\":20}', '{}', 'Azurill.png'),
+(298, 'Azurill', '{ \"type\":[\"Normal\",\"Fairy\"]}', '{\"HP\":50,\"Attack\":20,\"Defense\":40,\"Sp. Attack\":20,\"Sp. Defense\":40,\"Speed\":20}', '{}', 'Azurill.png');
+INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUES
 (299, 'Tarinor', '{ \"type\":[\"Rock\"]}', '{\"HP\":30,\"Attack\":45,\"Defense\":135,\"Sp. Attack\":45,\"Sp. Defense\":90,\"Speed\":30}', '{}', 'Nosepass.png'),
 (300, 'Skitty', '{ \"type\":[\"Normal\"]}', '{\"HP\":50,\"Attack\":45,\"Defense\":45,\"Sp. Attack\":35,\"Sp. Defense\":35,\"Speed\":50}', '{}', 'Skitty.png'),
 (301, 'Delcatty', '{ \"type\":[\"Normal\"]}', '{\"HP\":70,\"Attack\":65,\"Defense\":65,\"Sp. Attack\":55,\"Sp. Defense\":55,\"Speed\":90}', '{}', 'Delcatty.png'),
-(302, 'Ténéfix', '{ \"type\":[\"Dark\",\"Ghost\"]}', '{\"HP\":50,\"Attack\":75,\"Defense\":75,\"Sp. Attack\":65,\"Sp. Defense\":65,\"Speed\":50}', '{}', 'Sableye.png');
-INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUES
+(302, 'Ténéfix', '{ \"type\":[\"Dark\",\"Ghost\"]}', '{\"HP\":50,\"Attack\":75,\"Defense\":75,\"Sp. Attack\":65,\"Sp. Defense\":65,\"Speed\":50}', '{}', 'Sableye.png'),
 (303, 'Mysdibule', '{ \"type\":[\"Steel\",\"Fairy\"]}', '{\"HP\":50,\"Attack\":85,\"Defense\":85,\"Sp. Attack\":55,\"Sp. Defense\":55,\"Speed\":50}', '{}', 'Mawile.png'),
 (304, 'Galekid', '{ \"type\":[\"Steel\",\"Rock\"]}', '{\"HP\":50,\"Attack\":70,\"Defense\":100,\"Sp. Attack\":40,\"Sp. Defense\":40,\"Speed\":30}', '{}', 'Aron.png'),
 (305, 'Galegon', '{ \"type\":[\"Steel\",\"Rock\"]}', '{\"HP\":60,\"Attack\":90,\"Defense\":140,\"Sp. Attack\":50,\"Sp. Defense\":50,\"Speed\":40}', '{}', 'Lairon.png'),
@@ -375,7 +375,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (331, 'Cacnea', '{ \"type\":[\"Grass\"]}', '{\"HP\":50,\"Attack\":85,\"Defense\":40,\"Sp. Attack\":85,\"Sp. Defense\":40,\"Speed\":35}', '{}', 'Cacnea.png'),
 (332, 'Cacturne', '{ \"type\":[\"Grass\",\"Dark\"]}', '{\"HP\":70,\"Attack\":115,\"Defense\":60,\"Sp. Attack\":115,\"Sp. Defense\":60,\"Speed\":55}', '{}', 'Cacturne.png'),
 (333, 'Tylton', '{ \"type\":[\"Normal\",\"Flying\"]}', '{\"HP\":45,\"Attack\":40,\"Defense\":60,\"Sp. Attack\":40,\"Sp. Defense\":75,\"Speed\":50}', '{}', 'Swablu.png'),
-(334, 'Altaria', '{ \"type\":[\"Dragon\",\"Flying\"]}', '{\"HP\":75,\"Attack\":70,\"Defense\":90,\"Sp. Attack\":70,\"Sp. Defense\":105,\"Speed\":80}', '{}', 'Altaria.png'),
+(334, 'Altaria', '{ \"type\":[\"Dragon\",\"Flying\"]}', '{\"HP\":75,\"Attack\":70,\"Defense\":90,\"Sp. Attack\":70,\"Sp. Defense\":105,\"Speed\":80}', '{\"evolution\":[\"Swablu\", \"Altaria\"]}', 'Altaria.png'),
 (335, 'Mangriff', '{ \"type\":[\"Normal\"]}', '{\"HP\":73,\"Attack\":115,\"Defense\":60,\"Sp. Attack\":60,\"Sp. Defense\":60,\"Speed\":90}', '{}', 'Zangoose.png'),
 (336, 'Séviper', '{ \"type\":[\"Poison\"]}', '{\"HP\":73,\"Attack\":100,\"Defense\":60,\"Sp. Attack\":100,\"Sp. Defense\":60,\"Speed\":65}', '{}', 'Seviper.png'),
 (337, 'Séléroc', '{ \"type\":[\"Rock\",\"Psychic\"]}', '{\"HP\":90,\"Attack\":55,\"Defense\":65,\"Sp. Attack\":95,\"Sp. Defense\":85,\"Speed\":70}', '{}', 'Lunatone.png'),
@@ -388,7 +388,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (344, 'Kaorine', '{ \"type\":[\"Ground\",\"Psychic\"]}', '{\"HP\":60,\"Attack\":70,\"Defense\":105,\"Sp. Attack\":70,\"Sp. Defense\":120,\"Speed\":75}', '{}', 'Claydol.png'),
 (345, 'Lilia', '{ \"type\":[\"Rock\",\"Grass\"]}', '{\"HP\":66,\"Attack\":41,\"Defense\":77,\"Sp. Attack\":61,\"Sp. Defense\":87,\"Speed\":23}', '{}', 'Lileep.png'),
 (346, 'Vacilys', '{ \"type\":[\"Rock\",\"Grass\"]}', '{\"HP\":86,\"Attack\":81,\"Defense\":97,\"Sp. Attack\":81,\"Sp. Defense\":107,\"Speed\":43}', '{}', 'Cradily.png'),
-(347, 'Anorith', '{ \"type\":[\"Rock\",\"Bug\"]}', '{\"HP\":45,\"Attack\":95,\"Defense\":50,\"Sp. Attack\":40,\"Sp. Defense\":50,\"Speed\":75}', '{}', 'Anorith.png'),
+(347, 'Anorith', '{ \"type\":[\"Rock\",\"Bug\"]}', '{\"HP\":45,\"Attack\":95,\"Defense\":50,\"Sp. Attack\":40,\"Sp. Defense\":50,\"Speed\":75}', '{\"evolution\":[\"Anorith\", \"Armaldo\"]}', 'Anorith.png'),
 (348, 'Armaldo', '{ \"type\":[\"Rock\",\"Bug\"]}', '{\"HP\":75,\"Attack\":125,\"Defense\":100,\"Sp. Attack\":70,\"Sp. Defense\":80,\"Speed\":45}', '{}', 'Armaldo.png'),
 (349, 'Barpau', '{ \"type\":[\"Water\"]}', '{\"HP\":20,\"Attack\":15,\"Defense\":20,\"Sp. Attack\":10,\"Sp. Defense\":55,\"Speed\":80}', '{}', 'Feebas.png'),
 (350, 'Milobellus', '{ \"type\":[\"Water\"]}', '{\"HP\":95,\"Attack\":60,\"Defense\":79,\"Sp. Attack\":100,\"Sp. Defense\":125,\"Speed\":81}', '{}', 'Milotic.png'),
@@ -400,7 +400,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (356, 'Téraclope', '{ \"type\":[\"Ghost\"]}', '{\"HP\":40,\"Attack\":70,\"Defense\":130,\"Sp. Attack\":60,\"Sp. Defense\":130,\"Speed\":25}', '{}', 'Dusclops.png'),
 (357, 'Tropius', '{ \"type\":[\"Grass\",\"Flying\"]}', '{\"HP\":99,\"Attack\":68,\"Defense\":83,\"Sp. Attack\":72,\"Sp. Defense\":87,\"Speed\":51}', '{}', 'Tropius.png'),
 (358, 'Éoko', '{ \"type\":[\"Psychic\"]}', '{\"HP\":75,\"Attack\":50,\"Defense\":80,\"Sp. Attack\":95,\"Sp. Defense\":90,\"Speed\":65}', '{}', 'Chimecho.png'),
-(359, 'Absol', '{ \"type\":[\"Dark\"]}', '{\"HP\":65,\"Attack\":130,\"Defense\":60,\"Sp. Attack\":75,\"Sp. Defense\":60,\"Speed\":75}', '{}', 'Absol.png'),
+(359, 'Absol', '{ \"type\":[\"Dark\"]}', '{\"HP\":65,\"Attack\":130,\"Defense\":60,\"Sp. Attack\":75,\"Sp. Defense\":60,\"Speed\":75}', '{\"evolution\":[\"Mega-absol\"]}', 'Absol.png'),
 (360, 'Okéoké', '{ \"type\":[\"Psychic\"]}', '{\"HP\":95,\"Attack\":23,\"Defense\":48,\"Sp. Attack\":23,\"Sp. Defense\":48,\"Speed\":23}', '{}', 'Wynaut.png'),
 (361, 'Stalgamin', '{ \"type\":[\"Ice\"]}', '{\"HP\":50,\"Attack\":50,\"Defense\":50,\"Sp. Attack\":50,\"Sp. Defense\":50,\"Speed\":50}', '{}', 'Snorunt.png'),
 (362, 'Oniglali', '{ \"type\":[\"Ice\"]}', '{\"HP\":80,\"Attack\":80,\"Defense\":80,\"Sp. Attack\":80,\"Sp. Defense\":80,\"Speed\":80}', '{}', 'Glalie.png'),
@@ -456,8 +456,8 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (412, 'Cheniti', '{ \"type\":[\"Bug\"]}', '{\"HP\":40,\"Attack\":29,\"Defense\":45,\"Sp. Attack\":29,\"Sp. Defense\":45,\"Speed\":36}', '{}', 'Burmy.png'),
 (413, 'Cheniselle', '{ \"type\":[\"Bug\",\"Grass\"]}', '{\"HP\":60,\"Attack\":59,\"Defense\":85,\"Sp. Attack\":79,\"Sp. Defense\":105,\"Speed\":36}', '{}', 'Wormadam.png'),
 (414, 'Papilord', '{ \"type\":[\"Bug\",\"Flying\"]}', '{\"HP\":70,\"Attack\":94,\"Defense\":50,\"Sp. Attack\":94,\"Sp. Defense\":50,\"Speed\":66}', '{}', 'Mothim.png'),
-(415, 'Apitrini', '{ \"type\":[\"Bug\",\"Flying\"]}', '{\"HP\":30,\"Attack\":30,\"Defense\":42,\"Sp. Attack\":30,\"Sp. Defense\":42,\"Speed\":70}', '{}', 'Combee.png'),
-(416, 'Apireine', '{ \"type\":[\"Bug\",\"Flying\"]}', '{\"HP\":70,\"Attack\":80,\"Defense\":102,\"Sp. Attack\":80,\"Sp. Defense\":102,\"Speed\":40}', '{}', 'Vespiquen.png'),
+(415, 'Apitrini', '{ \"type\":[\"Bug\",\"Flying\"]}', '{\"HP\":30,\"Attack\":30,\"Defense\":42,\"Sp. Attack\":30,\"Sp. Defense\":42,\"Speed\":70}', '{\"evolution\":[\"Combee\", \"Vespiquen\"]}', 'Combee.png'),
+(416, 'Apireine', '{ \"type\":[\"Bug\",\"Flying\"]}', '{\"HP\":70,\"Attack\":80,\"Defense\":102,\"Sp. Attack\":80,\"Sp. Defense\":102,\"Speed\":40}', '{\"evolution\":[\"Combee\", \"Vespiquen\"]}', 'Vespiquen.png'),
 (417, 'Pachirisu', '{ \"type\":[\"Electric\"]}', '{\"HP\":60,\"Attack\":45,\"Defense\":70,\"Sp. Attack\":45,\"Sp. Defense\":90,\"Speed\":95}', '{}', 'Pachirisu.png'),
 (418, 'Mustébouée', '{ \"type\":[\"Water\"]}', '{\"HP\":55,\"Attack\":65,\"Defense\":35,\"Sp. Attack\":60,\"Sp. Defense\":30,\"Speed\":85}', '{}', 'Buizel.png'),
 (419, 'Mustéflott', '{ \"type\":[\"Water\"]}', '{\"HP\":85,\"Attack\":105,\"Defense\":55,\"Sp. Attack\":85,\"Sp. Defense\":50,\"Speed\":115}', '{}', 'Floatzel.png'),
@@ -501,7 +501,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (457, 'Luminéon', '{ \"type\":[\"Water\"]}', '{\"HP\":69,\"Attack\":69,\"Defense\":76,\"Sp. Attack\":69,\"Sp. Defense\":86,\"Speed\":91}', '{}', 'Lumineon.png'),
 (458, 'Babimanta', '{ \"type\":[\"Water\",\"Flying\"]}', '{\"HP\":45,\"Attack\":20,\"Defense\":50,\"Sp. Attack\":60,\"Sp. Defense\":120,\"Speed\":50}', '{}', 'Mantyke.png'),
 (459, 'Blizzi', '{ \"type\":[\"Grass\",\"Ice\"]}', '{\"HP\":60,\"Attack\":62,\"Defense\":50,\"Sp. Attack\":62,\"Sp. Defense\":60,\"Speed\":40}', '{}', 'Snover.png'),
-(460, 'Blizzaroi', '{ \"type\":[\"Grass\",\"Ice\"]}', '{\"HP\":90,\"Attack\":92,\"Defense\":75,\"Sp. Attack\":92,\"Sp. Defense\":85,\"Speed\":60}', { \"imgage\":'Abomasnow.png'}'),
+(460, 'Blizzaroi', '{ \"type\":[\"Grass\",\"Ice\"]}', '{\"HP\":90,\"Attack\":92,\"Defense\":75,\"Sp. Attack\":92,\"Sp. Defense\":85,\"Speed\":60}', '{}', 'Abomasnow.png'),
 (461, 'Dimoret', '{ \"type\":[\"Dark\",\"Ice\"]}', '{\"HP\":70,\"Attack\":120,\"Defense\":65,\"Sp. Attack\":45,\"Sp. Defense\":85,\"Speed\":125}', '{}', 'Weavile.png'),
 (462, 'Magnézone', '{ \"type\":[\"Electric\",\"Steel\"]}', '{\"HP\":70,\"Attack\":70,\"Defense\":115,\"Sp. Attack\":130,\"Sp. Defense\":90,\"Speed\":60}', '{}', 'Magnezone.png'),
 (463, 'Coudlangue', '{ \"type\":[\"Normal\"]}', '{\"HP\":110,\"Attack\":85,\"Defense\":95,\"Sp. Attack\":80,\"Sp. Defense\":95,\"Speed\":50}', '{}', 'Lickilicky.png'),
@@ -608,7 +608,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (564, 'Carapagos', '{ \"type\":[\"Water\",\"Rock\"]}', '{\"HP\":54,\"Attack\":78,\"Defense\":103,\"Sp. Attack\":53,\"Sp. Defense\":45,\"Speed\":22}', '{}', 'Tirtouga.png'),
 (565, 'Mégapagos', '{ \"type\":[\"Water\",\"Rock\"]}', '{\"HP\":74,\"Attack\":108,\"Defense\":133,\"Sp. Attack\":83,\"Sp. Defense\":65,\"Speed\":32}', '{}', 'Carracosta.png'),
 (566, 'Arkéapti', '{ \"type\":[\"Rock\",\"Flying\"]}', '{\"HP\":55,\"Attack\":112,\"Defense\":45,\"Sp. Attack\":74,\"Sp. Defense\":45,\"Speed\":70}', '{}', 'Archen.png'),
-(567, 'Aéroptéryx', '{ \"type\":[\"Rock\",\"Flying\"]}', '{\"HP\":75,\"Attack\":140,\"Defense\":65,\"Sp. Attack\":112,\"Sp. Defense\":65,\"Speed\":110}', '{}', 'Archeops.png'),
+(567, 'Aéroptéryx', '{ \"type\":[\"Rock\",\"Flying\"]}', '{\"HP\":75,\"Attack\":140,\"Defense\":65,\"Sp. Attack\":112,\"Sp. Defense\":65,\"Speed\":110}', '{\"evolution\":[\"Archen\", \"Archeops\"]}', 'Archeops.png'),
 (568, 'Miamiasme', '{ \"type\":[\"Poison\"]}', '{\"HP\":50,\"Attack\":50,\"Defense\":62,\"Sp. Attack\":40,\"Sp. Defense\":62,\"Speed\":65}', '{}', 'Trubbish.png'),
 (569, 'Miasmax', '{ \"type\":[\"Poison\"]}', '{\"HP\":80,\"Attack\":95,\"Defense\":82,\"Sp. Attack\":60,\"Sp. Defense\":82,\"Speed\":75}', '{}', 'Garbodor.png'),
 (570, 'Zorua', '{ \"type\":[\"Dark\"]}', '{\"HP\":40,\"Attack\":65,\"Defense\":40,\"Sp. Attack\":80,\"Sp. Defense\":40,\"Speed\":65}', '{}', 'Zorua.png'),
@@ -639,13 +639,13 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (595, 'Statitik', '{ \"type\":[\"Bug\",\"Electric\"]}', '{\"HP\":50,\"Attack\":47,\"Defense\":50,\"Sp. Attack\":57,\"Sp. Defense\":50,\"Speed\":65}', '{}', 'Joltik.png'),
 (596, 'Mygavolt', '{ \"type\":[\"Bug\",\"Electric\"]}', '{\"HP\":70,\"Attack\":77,\"Defense\":60,\"Sp. Attack\":97,\"Sp. Defense\":60,\"Speed\":108}', '{}', 'Galvantula.png'),
 (597, 'Grindur', '{ \"type\":[\"Grass\",\"Steel\"]}', '{\"HP\":44,\"Attack\":50,\"Defense\":91,\"Sp. Attack\":24,\"Sp. Defense\":86,\"Speed\":10}', '{}', 'Ferroseed.png'),
-(598, 'Noacier', '{ \"type\":[\"Grass\",\"Steel\"]}', '{\"HP\":74,\"Attack\":94,\"Defense\":131,\"Sp. Attack\":54,\"Sp. Defense\":116,\"Speed\":20}', '{}', 'Ferrothorn.png'),
+(598, 'Noacier', '{ \"type\":[\"Grass\",\"Steel\"]}', '{\"HP\":74,\"Attack\":94,\"Defense\":131,\"Sp. Attack\":54,\"Sp. Defense\":116,\"Speed\":20}', '{}', 'Ferrothorn.png');
+INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUES
 (599, 'Tic', '{ \"type\":[\"Steel\"]}', '{\"HP\":40,\"Attack\":55,\"Defense\":70,\"Sp. Attack\":45,\"Sp. Defense\":60,\"Speed\":30}', '{}', 'Klink.png'),
 (600, 'Clic', '{ \"type\":[\"Steel\"]}', '{\"HP\":60,\"Attack\":80,\"Defense\":95,\"Sp. Attack\":70,\"Sp. Defense\":85,\"Speed\":50}', '{}', 'Klang.png'),
 (601, 'Cliticlic', '{ \"type\":[\"Steel\"]}', '{\"HP\":60,\"Attack\":100,\"Defense\":115,\"Sp. Attack\":70,\"Sp. Defense\":85,\"Speed\":90}', '{}', 'Klinklang.png'),
-(602, 'Anchwatt', '{ \"type\":[\"Electric\"]}', '{\"HP\":35,\"Attack\":55,\"Defense\":40,\"Sp. Attack\":45,\"Sp. Defense\":40,\"Speed\":60}', '{}', 'Tynamo.png'),
-(603, 'Lampéroie', '{ \"type\":[\"Electric\"]}', '{\"HP\":65,\"Attack\":85,\"Defense\":70,\"Sp. Attack\":75,\"Sp. Defense\":70,\"Speed\":40}', '{}', 'Eelektrik.png');
-INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUES
+(602, 'Anchwatt', '{ \"type\":[\"Electric\"]}', '{\"HP\":35,\"Attack\":55,\"Defense\":40,\"Sp. Attack\":45,\"Sp. Defense\":40,\"Speed\":60}', '{\"evolution\":[\"Tynamo\", \"Eelektrik\", \"Eelektross\"]}', 'Tynamo.png'),
+(603, 'Lampéroie', '{ \"type\":[\"Electric\"]}', '{\"HP\":65,\"Attack\":85,\"Defense\":70,\"Sp. Attack\":75,\"Sp. Defense\":70,\"Speed\":40}', '{}', 'Eelektrik.png'),
 (604, 'Ohmassacre', '{ \"type\":[\"Electric\"]}', '{\"HP\":85,\"Attack\":115,\"Defense\":80,\"Sp. Attack\":105,\"Sp. Defense\":80,\"Speed\":50}', '{}', 'Eelektross.png'),
 (605, 'Lewsor', '{ \"type\":[\"Psychic\"]}', '{\"HP\":55,\"Attack\":55,\"Defense\":55,\"Sp. Attack\":85,\"Sp. Defense\":55,\"Speed\":30}', '{}', 'Elgyem.png'),
 (606, 'Neitram', '{ \"type\":[\"Psychic\"]}', '{\"HP\":75,\"Attack\":75,\"Defense\":75,\"Sp. Attack\":125,\"Sp. Defense\":95,\"Speed\":40}', '{}', 'Beheeyem.png'),
@@ -673,7 +673,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (628, 'Gueriaigle', '{ \"type\":[\"Normal\",\"Flying\"]}', '{\"HP\":100,\"Attack\":123,\"Defense\":75,\"Sp. Attack\":57,\"Sp. Defense\":75,\"Speed\":80}', '{}', 'Braviary.png'),
 (629, 'Vostourno', '{ \"type\":[\"Dark\",\"Flying\"]}', '{\"HP\":70,\"Attack\":55,\"Defense\":75,\"Sp. Attack\":45,\"Sp. Defense\":65,\"Speed\":60}', '{}', 'Vullaby.png'),
 (630, 'Vaututrice', '{ \"type\":[\"Dark\",\"Flying\"]}', '{\"HP\":110,\"Attack\":65,\"Defense\":105,\"Sp. Attack\":55,\"Sp. Defense\":95,\"Speed\":80}', '{}', 'Mandibuzz.png'),
-(631, 'Aflamanoir', '{ \"type\":[\"Fire\"]}', '{\"HP\":85,\"Attack\":97,\"Defense\":66,\"Sp. Attack\":105,\"Sp. Defense\":66,\"Speed\":65}', '{}', 'Heatmor.png'),
+(631, 'Aflamanoir', '{ \"type\":[\"Fire\"]}', '{\"HP\":85,\"Attack\":97,\"Defense\":66,\"Sp. Attack\":105,\"Sp. Defense\":66,\"Speed\":65}', '{\"evolution\":[\"This Pokémon does not evolve.\"]}', 'Heatmor.png'),
 (632, 'Fermite', '{ \"type\":[\"Bug\",\"Steel\"]}', '{\"HP\":58,\"Attack\":109,\"Defense\":112,\"Sp. Attack\":48,\"Sp. Defense\":48,\"Speed\":109}', '{}', 'Durant.png'),
 (633, 'Solochi', '{ \"type\":[\"Dark\",\"Dragon\"]}', '{\"HP\":52,\"Attack\":65,\"Defense\":50,\"Sp. Attack\":45,\"Sp. Defense\":50,\"Speed\":38}', '{}', 'Deino.png'),
 (634, 'Diamat', '{ \"type\":[\"Dark\",\"Dragon\"]}', '{\"HP\":72,\"Attack\":85,\"Defense\":70,\"Sp. Attack\":65,\"Sp. Defense\":70,\"Speed\":58}', '{}', 'Zweilous.png'),
@@ -700,7 +700,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (655, 'Goupelin', '{ \"type\":[\"Fire\",\"Psychic\"]}', '{\"HP\":75,\"Attack\":69,\"Defense\":72,\"Sp. Attack\":114,\"Sp. Defense\":100,\"Speed\":104}', '{}', 'Delphox.png'),
 (656, 'Grenousse', '{ \"type\":[\"Water\"]}', '{\"HP\":41,\"Attack\":56,\"Defense\":40,\"Sp. Attack\":62,\"Sp. Defense\":44,\"Speed\":71}', '{}', 'Froakie.png'),
 (657, 'Croâporal', '{ \"type\":[\"Water\"]}', '{\"HP\":54,\"Attack\":63,\"Defense\":52,\"Sp. Attack\":83,\"Sp. Defense\":56,\"Speed\":97}', '{}', 'Frogadier.png'),
-(658, 'Amphinobi', '{ \"type\":[\"Water\",\"Dark\"]}', '{\"HP\":72,\"Attack\":95,\"Defense\":67,\"Sp. Attack\":103,\"Sp. Defense\":71,\"Speed\":122}', '{}', 'Greninja.png'),
+(658, 'Amphinobi', '{ \"type\":[\"Water\",\"Dark\"]}', '{\"HP\":72,\"Attack\":95,\"Defense\":67,\"Sp. Attack\":103,\"Sp. Defense\":71,\"Speed\":122}', '{\"evolution\":[\"Froakie\", \"Frogadier\", \"Greninja\"]}', 'Greninja.png'),
 (659, 'Sapereau', '{ \"type\":[\"Normal\"]}', '{\"HP\":38,\"Attack\":36,\"Defense\":38,\"Sp. Attack\":32,\"Sp. Defense\":36,\"Speed\":57}', '{}', 'Bunnelby.png'),
 (660, 'Excavarenne', '{ \"type\":[\"Normal\",\"Ground\"]}', '{\"HP\":85,\"Attack\":56,\"Defense\":77,\"Sp. Attack\":50,\"Sp. Defense\":77,\"Speed\":78}', '{}', 'Diggersby.png'),
 (661, 'Passerouge', '{ \"type\":[\"Normal\",\"Flying\"]}', '{\"HP\":45,\"Attack\":50,\"Defense\":43,\"Sp. Attack\":40,\"Sp. Defense\":38,\"Speed\":62}', '{}', 'Fletchling.png'),
@@ -740,7 +740,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (695, 'Iguolta', '{ \"type\":[\"Electric\",\"Normal\"]}', '{\"HP\":62,\"Attack\":55,\"Defense\":52,\"Sp. Attack\":109,\"Sp. Defense\":94,\"Speed\":109}', '{}', 'Heliolisk.png'),
 (696, 'Ptyranidur', '{ \"type\":[\"Rock\",\"Dragon\"]}', '{\"HP\":58,\"Attack\":89,\"Defense\":77,\"Sp. Attack\":45,\"Sp. Defense\":45,\"Speed\":48}', '{}', 'Tyrunt.png'),
 (697, 'Rexillius', '{ \"type\":[\"Rock\",\"Dragon\"]}', '{\"HP\":82,\"Attack\":121,\"Defense\":119,\"Sp. Attack\":69,\"Sp. Defense\":59,\"Speed\":71}', '{}', 'Tyrantrum.png'),
-(698, 'Amagara', '{ \"type\":[\"Rock\",\"Ice\"]}', '{\"HP\":77,\"Attack\":59,\"Defense\":50,\"Sp. Attack\":67,\"Sp. Defense\":63,\"Speed\":46}', '{}', 'Amaura.png'),
+(698, 'Amagara', '{ \"type\":[\"Rock\",\"Ice\"]}', '{\"HP\":77,\"Attack\":59,\"Defense\":50,\"Sp. Attack\":67,\"Sp. Defense\":63,\"Speed\":46}', '{\"evolution\":[\"Amaura\", \"Aurorus\"]}', 'Amaura.png'),
 (699, 'Dragmara', '{ \"type\":[\"Rock\",\"Ice\"]}', '{\"HP\":123,\"Attack\":77,\"Defense\":72,\"Sp. Attack\":99,\"Sp. Defense\":92,\"Speed\":58}', '{}', 'Aurorus.png'),
 (700, 'Nymphali', '{ \"type\":[\"Fairy\"]}', '{\"HP\":95,\"Attack\":65,\"Defense\":65,\"Sp. Attack\":110,\"Sp. Defense\":130,\"Speed\":60}', '{}', 'Sylveon.png'),
 (701, 'Brutalibré', '{ \"type\":[\"Fighting\",\"Flying\"]}', '{\"HP\":78,\"Attack\":92,\"Defense\":75,\"Sp. Attack\":74,\"Sp. Defense\":63,\"Speed\":118}', '{}', 'Hawlucha.png'),
@@ -793,7 +793,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (748, 'Prédastérie', '{ \"type\":[\"Poison\",\"Water\"]}', '{\"HP\":50,\"Attack\":63,\"Defense\":152,\"Sp. Attack\":53,\"Sp. Defense\":142,\"Speed\":35}', '{}', 'Toxapex.png'),
 (749, 'Tiboudet', '{ \"type\":[\"Ground\"]}', '{\"HP\":70,\"Attack\":100,\"Defense\":70,\"Sp. Attack\":45,\"Sp. Defense\":55,\"Speed\":45}', '{}', 'Mudbray.png'),
 (750, 'Bourrinos', '{ \"type\":[\"Ground\"]}', '{\"HP\":100,\"Attack\":125,\"Defense\":100,\"Sp. Attack\":55,\"Sp. Defense\":85,\"Speed\":35}', '{}', 'Mudsdale.png'),
-(751, 'Araqua', '{ \"type\":[\"Water\",\"Bug\"]}', '{\"HP\":38,\"Attack\":40,\"Defense\":52,\"Sp. Attack\":40,\"Sp. Defense\":72,\"Speed\":27}', '{}', 'Dewpider.png'),
+(751, 'Araqua', '{ \"type\":[\"Water\",\"Bug\"]}', '{\"HP\":38,\"Attack\":40,\"Defense\":52,\"Sp. Attack\":40,\"Sp. Defense\":72,\"Speed\":27}', '{\"evolution\":[\"Dewpider\", \"Araquanid\"]}', 'Dewpider.png'),
 (752, 'Tarenbulle', '{ \"type\":[\"Water\",\"Bug\"]}', '{\"HP\":68,\"Attack\":70,\"Defense\":92,\"Sp. Attack\":50,\"Sp. Defense\":132,\"Speed\":42}', '{}', 'Araquanid.png'),
 (753, 'Mimantis', '{ \"type\":[\"Grass\"]}', '{\"HP\":40,\"Attack\":55,\"Defense\":35,\"Sp. Attack\":50,\"Sp. Defense\":35,\"Speed\":35}', '{}', 'Fomantis.png'),
 (754, 'Floramantis', '{ \"type\":[\"Grass\"]}', '{\"HP\":70,\"Attack\":105,\"Defense\":90,\"Sp. Attack\":80,\"Sp. Defense\":90,\"Speed\":45}', '{}', 'Lurantis.png'),
@@ -847,7 +847,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (802, 'Marshadow', '{ \"type\":[\"Fighting\",\"Ghost\"]}', '{\"HP\":90,\"Attack\":125,\"Defense\":80,\"Sp. Attack\":90,\"Sp. Defense\":90,\"Speed\":125}', '{}', 'Marshadow.png'),
 (803, 'Vémini', '{ \"type\":[\"Poison\"]}', '{\"HP\":67,\"Attack\":73,\"Defense\":67,\"Sp. Attack\":73,\"Sp. Defense\":67,\"Speed\":73}', '{}', 'Poipole.png'),
 (804, 'Mandrillon', '{ \"type\":[\"Poison\",\"Dragon\"]}', '{\"HP\":73,\"Attack\":73,\"Defense\":73,\"Sp. Attack\":127,\"Sp. Defense\":73,\"Speed\":121}', '{}', 'Naganadel.png'),
-(805, 'Ama - Ama', '{ \"type\":[\"Rock\",\"Steel\"]}', '{\"HP\":61,\"Attack\":131,\"Defense\":211,\"Sp. Attack\":53,\"Sp. Defense\":101,\"Speed\":13}', '{}', 'Stakataka.png'),
+(805, 'Ama - Ama', '{ \"type\":[\"Rock\",\"Steel\"]}', '{\"HP\":61,\"Attack\":131,\"Defense\":211,\"Sp. Attack\":53,\"Sp. Defense\":101,\"Speed\":13}', '{\"evolution\":[\"This Pokémon does not evolve.\"]}', 'Stakataka.png'),
 (806, 'Pierroteknik', '{ \"type\":[\"Fire\",\"Ghost\"]}', '{\"HP\":53,\"Attack\":127,\"Defense\":53,\"Sp. Attack\":151,\"Sp. Defense\":79,\"Speed\":107}', '{}', 'Blacephalon.png'),
 (807, 'Zeraora', '{ \"type\":[\"Electric\"]}', '{\"HP\":88,\"Attack\":112,\"Defense\":75,\"Sp. Attack\":102,\"Sp. Defense\":80,\"Speed\":143}', '{}', 'Zeraora.png'),
 (808, 'Meltan', '{ \"type\":[\"Steel\"]}', '{\"HP\":46,\"Attack\":65,\"Defense\":65,\"Sp. Attack\":55,\"Sp. Defense\":35,\"Speed\":34}', '{}', 'Meltan.png'),
@@ -903,7 +903,7 @@ INSERT INTO `pokemon` (`id`, `name`, `type`, `base`, `evolution`, `image`) VALUE
 (858, 'Sorcilence', '{ \"type\":[\"Psychic\",\"Fairy\"]}', '{}', '{}', 'Hatterene.png'),
 (859, 'Grimalin', '{ \"type\":[\"Dark\",\"Fairy\"]}', '{}', '{}', 'Impidimp.png'),
 (860, 'Fourbelin', '{ \"type\":[\"Dark\",\"Fairy\"]}', '{}', '{}', 'Morgrem.png'),
-(861, 'Angoliath', '{ \"type\":[\"Dark\",\"Fairy\"]}', '{}', '{}', 'Grimmsnarl.png'),
+(861, 'Angoliath', '{ \"type\":[\"Dark\",\"Fairy\"]}', '{}', '{\"evolution\":[\"Impidimp\", \"Morgrem\", \"Grimmsnari\"]}', 'Grimmsnarl.png'),
 (862, 'Ixon', '{ \"type\":[\"Dark\",\"Normal\"]}', '{}', '{}', 'Obstagoon.png'),
 (863, 'Berserkatt', '{ \"type\":[\"Steel\"]}', '{}', '{}', 'Perrserker.png'),
 (864, 'Corayôme', '{ \"type\":[\"Ghost\"]}', '{}', '{}', 'Cursola.png'),
@@ -954,15 +954,16 @@ CREATE TABLE `users` (
   `password` char(255) NOT NULL,
   `email` char(255) NOT NULL,
   `admin` tinyint(1) NOT NULL,
-  `favoris` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`favoris`))
+  `favoris` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`favoris`)),
+  `bio` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `email`, `admin`, `favoris`) VALUES
-(1, 'Admin', 'Admin', 'Admin@admin.com', 1, '{\"fav\":[0,1]}');
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `admin`, `favoris`, `bio`) VALUES
+(1, 'Admin', 'Admin', 'Admin@admin.com', 1, '{\"fav\":[0,1]}', '');
 
 --
 -- Index pour les tables déchargées
