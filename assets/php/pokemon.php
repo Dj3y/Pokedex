@@ -12,9 +12,14 @@
                 $select = $connect->prepare($sql);
                 $select->execute($params); 
                 $results = $select->fetchAll(PDO::FETCH_ASSOC);
+                
+                
+                $nbr = 20;
+                $page = $_GET['page'];
 
-                foreach ($results as $value) {
-                    echo '<div class="pokemon-card"><a href="pokemonDetails.php?idP='. $value["id"] .'">';
+                for($i = 0; $i < $nbr; $i ++){
+                    $value = $results[$i + (20 * ($page - 1))];
+                    echo '<div class="pokemon-card"><a href="pokemonDetails.php?idP='. $value["id"] .'"';
                     echo '<h2>' . $value["name"] . '</h2>';
                     echo '<img src="assets/pokemon/' . $value["image"] . '" alt="' . $value["name"] . '">';
                     echo '</a></div>';
