@@ -5,11 +5,11 @@
 try {
     $sql = "SELECT * FROM pokemon";
 
-
     $select = $connect->prepare($sql);
     //u not searching a precise thing, since * then no need ([])!
     $select->execute(); 
     $results = $select->fetchAll(PDO::FETCH_ASSOC);
+
     foreach($results as $value){
         echo '<div class="pokemon-card">';
         echo '<img src="Assets/pokemon' . $value["image"] . '" alt="' . $value["name"] . '">';
@@ -22,6 +22,6 @@ try {
 } catch (PDOException $e) {
     echo "Error : " . $e->getMessage();
 }   
-
 ?>
+
 

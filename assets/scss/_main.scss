@@ -83,4 +83,15 @@ main{
             }
         }
     }
+
+    .pokemon-card-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .pokemon-card{
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

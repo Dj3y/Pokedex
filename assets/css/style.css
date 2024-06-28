@@ -115,6 +115,15 @@ main .form-register form a {
 main .form-register form a:hover {
   color: black;
 }
+main .pokemon-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main .pokemon-card-container .pokemon-card {
+  display: flex;
+  justify-content: center;
+}
 
 footer {
   background-color: white;
