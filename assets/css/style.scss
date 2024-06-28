@@ -1,11 +1,9 @@
-@charset "UTF-8";
 /* Reset des marges et des paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 /* styles.css */
 body {
   background-color: rgba(120, 119, 119, 0.248);
@@ -17,6 +15,7 @@ body.dark-mode {
   background-color: rgb(49, 49, 49);
   color: white;
 }
+
 
 /* Style pour le conteneur principal du formulaire */
 .main {
@@ -116,7 +115,6 @@ nav.dark-mode {
 nav.dark-mode a {
   color: white;
 }
-
 /* Styles pour le Pokémon */
 .pokemon {
   background-color: #F2F2F2;
@@ -142,22 +140,8 @@ nav.dark-mode a {
   display: block;
   color: white;
 }
-main .div-detail .info-pokemon h1 {
-  margin: 0;
-}
-main .div-detail .info-pokemon .div-type {
-  display: flex;
-}
-main .div-detail .info-pokemon .div-type p {
-  padding-right: 2%;
-  margin-right: 3%;
-}
 
 .evolution-container {
-main .div-detail .info-pokemon .progress-bar {
-  width: 100%;
-}
-main .div-detail .info-pokemon .progress-bar .bar {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,57 +154,6 @@ main .div-detail .info-pokemon .progress-bar .bar {
 
 /* Styles pour la colonne */
 .col {
-}
-main .div-detail .info-pokemon .progress-bar .bar label {
-  width: 150px;
-}
-main .div-detail .info-pokemon .progress-bar .bar progress {
-  width: 100%;
-  height: 20px;
-  border-radius: 15px;
-}
-main .div-detail .info-pokemon .progress-bar .bar progress::-webkit-progress-bar {
-  background-color: #E5E7EB;
-  border-radius: 15px;
-}
-main .div-detail .info-pokemon .progress-bar .bar progress::-webkit-progress-value {
-  background-color: #4E5866;
-  border-radius: 15px;
-}
-main .div-detail .info-pokemon .progress-bar .bar progress::-moz-progress-bar {
-  background: #E5E7EB;
-  background-color: #4E5866;
-  border-radius: 15px;
-}
-main .evolution {
-  display: flex;
-  justify-content: center;
-}
-main .evolution div {
-  width: 30%;
-  text-align: center;
-}
-main .evolution div img {
-  width: 7em;
-  background-color: #E5E7EB;
-  border-radius: 10px;
-  padding: 1%;
-  border: 3px solid #4677B1;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-main .evolution div img:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-main .evolution div p {
-  text-transform: capitalize;
-}
-main .img-pokemon {
-  display: flex;
-  align-items: center;
-}
-
-footer {
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,9 +163,66 @@ footer {
 footer div svg {
   height: 30px;
 }
-footer .github-perso a {
-  color: #326CB3;
+
+/* Media Queries pour rendre la page responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .logo {
+    height: 100px;
+    width: 100px;
+  }
+
+  .pokemon {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pokemon img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .stats-info {
+    padding: 10px;
+  }
+
+  .inputfield, label {
+    width: 100%;
+  }
 }
-footer .github-perso a:hover {
+
+@media (max-width: 480px) {
+ /* Styles pour le conteneur de la navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1em;
+}
+
+nav a {
   color: black;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-align: center;
 }
+
+nav a:hover {
+  background-color: #555;
+}
+
+  .button {
+    width: 100%;
+  }
+
+  .pokemon img {
+    max-width: 100px;
+  }
+}
+
+
+
