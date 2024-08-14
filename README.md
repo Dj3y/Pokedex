@@ -14,6 +14,11 @@ Stacy a fait le styling du site du header et footer, et a commencé le dark mode
 Moi, j'ai réalisé la page détail de chaque pokemeon, structure HTML et réalisation de toutes les fonctionnalités PHP et les requêtes pour l'affichage de toutes les informations du pokemon sélectionné. J'ai fait aussi le styling de la page connexion et inscription.  
 ___________________________________________________________________________________________________
 
+[Zahra](https://github.com/zaraana)
+[Nath](https://github.com/NathAmd)
+[Stacy](https://github.com/Druart-Stacy)
+___________________________________________________________________________________________________
+
 Pour pouvoir installer le projet vous devez cloner le repo dans votre ordinateur.   
 Installer la DB, c'est le fichier pokedex.sql.  
 Vous devez peut-être obligé de modifier le fichier engine.php, c'est le fichier pour la connexion à la DB. À vérifier le nom d'utilisateur et le mot de passe.
